@@ -13,7 +13,6 @@ git add .
 MSG=". Deployed: $DATE"
 git commit -m "$1 $MSG"
 git push
-echo "---------------------- Deploying lim ------------------------------------------"
-# below is an example of how i deploy to digital ocean, feel free to do whatever you want
-# ssh <<enter your ssh address>> 'cd /var/www/lim && git reset --hard && git pull && sudo systemctl restart lim.service'
+echo "---------------------- Deploying bre ------------------------------------------"
+ssh hamishclulee@more-art-than.science 'cd /var/www/atronin.space && sudo git reset --hard && sudo git pull && sudo systemctl restart atronin.service'
 echo "---------------------- Deploy complete. Have a nice day. ----------------------"
