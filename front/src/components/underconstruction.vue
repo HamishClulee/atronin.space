@@ -1,6 +1,6 @@
 <template>
     <div class="construction-con">
-        <h1 class="massive">@RONIN</h1>
+        <h1 class="massive">&#64;RONIN</h1>
     </div>
 </template>
 
