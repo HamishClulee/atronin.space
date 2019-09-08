@@ -56,7 +56,7 @@
         justify-content: center
         flex-direction: column
         text-align: center
-        background: url('../assets/social.jpg')
+        background: url('https://atronin.space/images/social.jpg')
         height: 100vh
         background-position: top
         background-repeat: no-repeat
