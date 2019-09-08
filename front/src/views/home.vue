@@ -8,23 +8,36 @@
                 v-for="(image, imageIndex) in images"
                 :key="imageIndex"
                 @click="index = imageIndex"
-                :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }">
+                :style="{
+                    backgroundImage: 'url(' + image + ')',
+                    width: '600px',
+                    height: '200px',
+                    backgroundPosition: 'top',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover'
+                }">
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import VueGallery from 'vue-gallery';
+    import Gallery from '../components/gallery.vue';
     export default {
         name: 'home',
         components: {
-            'gallery': VueGallery
+            'gallery': Gallery
         },
         data () {
             return {
                 images: [
-                    "https://atronin.space/images/social.jpg"
+                    "https://atronin.space/images/social.jpg",
+                    "https://atronin.space/images/social1.jpg",
+                    "https://atronin.space/images/social3.jpg",
+                    "https://atronin.space/images/social4.jpg",
+                    "https://atronin.space/images/work.jpg",
+                    "https://atronin.space/images/work2.jpg",
+                    "https://atronin.space/images/work1.jpg",
                 ],
                 index: null
             }
