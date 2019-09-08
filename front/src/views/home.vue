@@ -2,7 +2,6 @@
     <div class="home-con">
         <h1>Welcome home</h1>
         <div>
-            <!-- <img :src="" /> -->
             <gallery :images="images" :index="index" @close="index = null"></gallery>
             <div
                 class="image"
@@ -16,16 +15,16 @@
 </template>
 
 <script>
-    import Gallery from '../components/gallery.vue'
+    import VueGallery from 'vue-gallery';
     export default {
         name: 'home',
         components: {
-            'gallery': Gallery
+            'gallery': VueGallery
         },
         data () {
             return {
                 images: [
-                    "require('../assets/social.jpg')"
+                    "https://atronin.space/images/social.jpg"
                 ],
                 index: null
             }
