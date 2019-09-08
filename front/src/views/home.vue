@@ -1,14 +1,33 @@
 <template>
     <div class="home-con">
         <h1>Welcome home</h1>
+        <div>
+            <!-- <img :src="" /> -->
+            <gallery :images="images" :index="index" @close="index = null"></gallery>
+            <div
+                class="image"
+                v-for="(image, imageIndex) in images"
+                :key="imageIndex"
+                @click="index = imageIndex"
+                :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }">
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+    import Gallery from '../components/gallery.vue'
     export default {
         name: 'home',
+        components: {
+            'gallery': Gallery
+        },
         data () {
             return {
+                images: [
+                    "require('../assets/social.jpg')"
+                ],
+                index: null
             }
         },
         mounted () {

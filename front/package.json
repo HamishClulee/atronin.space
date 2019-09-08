@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "blueimp-gallery": "^2.35.0",
     "node-sass": "^4.10.0",
     "path": "^0.12.7",
     "sass-loader": "^7.1.0",
     "style-resources-loader": "^1.2.1",
     "vue": "^2.5.17",
+    "vue-gallery": "^2.0.0",
     "vue-router": "^3.0.2",
     "vuex": "^3.0.1"
   },

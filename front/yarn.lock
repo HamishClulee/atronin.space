@@ -947,10 +947,6 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-animejs@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/animejs/-/animejs-2.2.0.tgz#35eefdfc535b81949c9cb06f0b3e60c02e6fdc80"
-
 ansi-colors@^3.0.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.2.1.tgz#9638047e4213f3428a11944a7d4b31cba0a3ff95"
@@ -1251,6 +1247,11 @@ block-stream@*:
 bluebird@^3.1.1, bluebird@^3.5.1:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.3.tgz#7d01c6f9616c9a51ab0f8c549a79dfe6ec33efa7"
+
+blueimp-gallery@^2.33.0, blueimp-gallery@^2.35.0:
+  version "2.35.0"
+  resolved "https://registry.yarnpkg.com/blueimp-gallery/-/blueimp-gallery-2.35.0.tgz#96d5792138e3365ce83d0a4afd84a7f803612b29"
+  integrity sha512-/dT0K8Vh2FlmKW+PILbygoZ4ramOBM8x2e85JTHOXImI2v2flaBBInQNu7nPonCkWLFejfsf54oHdty1QQslog==
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
@@ -6821,6 +6822,13 @@ vue-eslint-parser@^3.2.1:
     espree "^4.1.0"
     esquery "^1.0.1"
     lodash "^4.17.11"
+
+vue-gallery@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-gallery/-/vue-gallery-2.0.0.tgz#07d29e9169701d7d19b6b5f643038f1d50606329"
+  integrity sha512-6BCItrHwH0v0p2T8Pf6iAUGOi7sZtDt/WLn+DiRznfMec/WPPjT/udBABChkyGGzdn/FBHoF768ITAjLDXfMLw==
+  dependencies:
+    blueimp-gallery "^2.33.0"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.1"
