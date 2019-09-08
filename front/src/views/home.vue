@@ -1,21 +1,24 @@
 <template>
     <div class="home-con">
-        <h1>Welcome home</h1>
-        <div>
+        <h1 class="main-heading">@RONIN</h1>
+        <h3 class="sub-heading">Work hard, live well, be productive and share your success with your peers.</h3>
+        <div class="images-con">
             <gallery :images="images" :index="index" @close="index = null"></gallery>
-            <div
-                class="image"
-                v-for="(image, imageIndex) in images"
-                :key="imageIndex"
-                @click="index = imageIndex"
-                :style="{
-                    backgroundImage: 'url(' + image + ')',
-                    width: '600px',
-                    height: '200px',
-                    backgroundPosition: 'top',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover'
-                }">
+            <div class="images">
+                <div
+                    class="image"
+                    v-for="(image, imageIndex) in images"
+                    :key="imageIndex"
+                    @click="index = imageIndex"
+                    :style="{
+                        backgroundImage: 'url(' + image + ')',
+                        width: '30vw',
+                        height: '30vw',
+                        backgroundPosition: 'top',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover'
+                    }">
+                </div>
             </div>
         </div>
     </div>
@@ -52,6 +55,14 @@
 </script>
 
 <style lang="sass" scoped>
+    .main-heading
+        color: $primary
+        text-align: left
+        width: 100%
+        font-size: 7em
+        letter-spacing: 3px
+    .sub-heading
+        color: $highlight
     .home-con
         padding: 10px
         display: flex
@@ -64,4 +75,27 @@
             @media (min-width: 0px) and (max-width: 780px)
                 text-align: left
                 width: 100%
+    .image
+        margin: 2px
+        border: 1px solid $secondary
+        transition: all 0.2s ease
+        &:hover
+            transform: scale(0.97)
+            transition: all 0.2s ease
+    .images
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+    .images-con
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
 </style>
