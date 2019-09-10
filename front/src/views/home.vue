@@ -25,7 +25,7 @@
 </template>
 
 <script>
-    import Gallery from '../components/gallery.vue';
+    import Gallery from '../components/gallery.vue'
     export default {
         name: 'home',
         components: {
