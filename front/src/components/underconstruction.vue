@@ -119,9 +119,9 @@
         overflow: hidden
         padding: 40px 0
         @media (min-width: 0px) and (max-width: 1280px)
-            font-size: 10em
+            font-size: 8em
         @media (min-width: 0px) and (max-width: 780px)
-            font-size: 5em
+            font-size: 4em
         .letter
             display: inline-block
             line-height: 1em
