@@ -1,8 +1,9 @@
 <template>
     <div class="construction-con">
         <div class="hero-con">
-            <h1 class="massive">&#64;RONIN</h1>
-            <h3>Co-living at its best.</h3>
+            <div>
+                <img src="https://atronin.space/images/logo-large-light.png" />
+            </div>
             <h5>This site is currently under construction.</h5>
             <p>&#64;RONIN is a co-living Villa in <a @click="bottom">Canggu, Bali</a>.</p>
             <p>We have created an environment that drives productivity and provides the social element missing from a lot of nomads working adventures.</p>
