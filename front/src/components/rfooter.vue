@@ -12,7 +12,7 @@ export default {
 .footer-con
     width: 100%
     background: url('https://atronin.space/images/footer.png')
-    height: 40vh
+    height: 50vh
     background-position: top
     background-repeat: no-repeat
     background-size: cover
