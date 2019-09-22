@@ -35,7 +35,8 @@ export default {
     flex-direction: row
     background-color: $dark-background
 .navbar-con
-
+    position: fixed
+    width: 100%
 .navbar-right
     align-items: center
     justify-content: flex-end
