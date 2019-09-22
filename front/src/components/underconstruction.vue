@@ -93,7 +93,6 @@
         width: 100%
         margin-left: auto
         margin-right: auto
-        min-height: 90vh
         img
             width: 50%
     .hero-con
@@ -138,7 +137,7 @@
         color: $secondary
     h5
         color: $tertiary
-        margin-top: -150px
+        margin-top: -2vw
     p
         color: $font
     .image
