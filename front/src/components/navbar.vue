@@ -30,5 +30,23 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+.navbar-con, .navbar-left, .navbar-right
+    display: flex
+    flex-direction: row
+    background-color: $dark-background
+.navbar-con
 
+.navbar-right
+    align-items: center
+    justify-content: flex-end
+    width: 100%
+    margin-right: 20px
+.logo-con
+    height: 80px
+    display: flex
+    align-items: center
+    img
+        height: 50px
+.text-item
+    padding: 0 20px
 </style>
