@@ -1,6 +1,7 @@
 <template>
   <div class="god-div">
       <div v-if="isauthed">
+          <navbar></navbar>
           <router-view></router-view>
       </div>
       <underconstruction v-else></underconstruction>
@@ -9,11 +10,13 @@
 
 <script>
     import underconstruction from './components/underconstruction'
+    import navbar from './components/navbar.vue'
     import { mapActions, mapGetters } from 'vuex'
     export default {
         name: 'app',
         components: {
             underconstruction,
+            navbar,
         },
         created() {
             this.SESSION_CHALLENGE()
@@ -24,11 +27,9 @@
         computed: {
             ...mapGetters(['isauthed'])
         },
-
     }
 </script>
 <style lang="sass" scoped>
     .god-div
         overflow-x: hidden !important
-
 </style>
