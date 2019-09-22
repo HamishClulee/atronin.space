@@ -90,12 +90,12 @@
 </script>
 <style lang="sass" scoped>
     .logo-con
-        width: 90%
+        width: 100%
         margin-left: auto
         margin-right: auto
         min-height: 90vh
         img
-            width: 100%
+            width: 50%
     .hero-con
         width: 95%
         display: flex
@@ -118,6 +118,7 @@
         justify-content: center
         flex-direction: column
         text-align: center
+        background-color: $light-background
     .massive
         width: 90%
         margin-left: auto
@@ -137,6 +138,7 @@
         color: $secondary
     h5
         color: $tertiary
+        margin-top: -150px
     p
         color: $font
     .image
