@@ -1,7 +1,7 @@
 <template>
     <div class="construction-con">
         <div class="hero-con">
-            <div>
+            <div class="logo-con">
                 <img src="https://atronin.space/images/logo-large-light.png" />
             </div>
             <h5>This site is currently under construction.</h5>
@@ -89,6 +89,13 @@
     }
 </script>
 <style lang="sass" scoped>
+    .logo-con
+        width: 90%
+        margin-left: auto
+        margin-right: auto
+        min-height: 90vh
+        img
+            width: 100%
     .hero-con
         width: 95%
         display: flex
