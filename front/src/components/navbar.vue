@@ -19,7 +19,7 @@
                 <router-link :to="{ path: '/pricing'}">pricing</router-link>
             </div>
             <div class="text-item">
-                <router-link :to="{ path: '/book'}">book</router-link>
+                <button class="button cta">book</button>
             </div>
         </div>
     </div>
@@ -30,10 +30,16 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+.cta
+    background-color: $highlight
+    color: $light-background
 .navbar-con, .navbar-left, .navbar-right
     display: flex
     flex-direction: row
     background-color: $dark-background
+    a
+        color: $light-background
+        text-transform: uppercase
 .navbar-con
     position: fixed
     width: 100%

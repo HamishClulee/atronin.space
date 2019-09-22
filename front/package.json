@@ -17,7 +17,6 @@
     "vue": "^2.5.17",
     "vue-gallery": "^2.0.0",
     "vue-router": "^3.0.2",
-    "vue-scrollto": "^2.17.1",
     "vue2-google-maps": "^0.10.7",
     "vuex": "^3.0.1"
   },

@@ -1,12 +1,6 @@
 <template>
     <div class="hero-con">
         <h1 class="massive">WE KNOW CO-DOING</h1>
-        <div class="enter-con" v-scroll-to="'#home-top'">
-            <h5>ENTER</h5>
-            <div class="triangle">
-                <div class="over-triangle"></div>
-            </div>
-        </div>
     </div>
 </template>
 
@@ -22,9 +16,6 @@
         mounted () {
         },
         methods: {
-            masuk() {
-                window.scrollBy(0, -1000);
-            }
         },
         computed: {
         }
@@ -42,7 +33,7 @@
         text-shadow: 2px 1px 0px $dark-background
     margin-top: 70px
     width: 100%
-    background: url('https://atronin.space/images/hero.jpg')
+    background: url('https://atronin.space/images/social.jpg')
     height: calc(100vh - 70px)
     background-position: top
     background-repeat: no-repeat
