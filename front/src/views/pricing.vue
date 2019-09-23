@@ -1,6 +1,6 @@
 <template>
     <div class="pricing-con">
-        <blockpricing :style="{ height: '60vh' }"></blockpricing>
+        <blockpricing :style="{ minHeight: '60vh' }"></blockpricing>
     </div>
 </template>
 
