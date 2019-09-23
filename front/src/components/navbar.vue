@@ -36,13 +36,14 @@ export default {
 .navbar-con, .navbar-left, .navbar-right
     display: flex
     flex-direction: row
-    background-color: $dark-background
+    background-color: $secondary
     a
         color: $light-background
         text-transform: uppercase
 .navbar-con
     position: fixed
     width: 100%
+    z-index: 2
 .navbar-right
     align-items: center
     justify-content: flex-end
