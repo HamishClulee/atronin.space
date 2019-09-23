@@ -3,11 +3,11 @@
 
         <div class="left-con">
             <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
-            <p class="subscribe-validation-message" :class="{ 'subscribe-error' : subscribeError  }">{{ getSubscribeValidationMessage }} {{ validationMessage }}</p>
+            <!-- <p class="subscribe-validation-message" :class="{ 'subscribe-error' : subscribeError  }">{{ getSubscribeValidationMessage }} {{ validationMessage }}</p>
             <div class="input-con">
                 <input class="input" type="text" placeholder="Enter your email..." v-model="localEmail">
                 <button class="button" @click="handleSubscribe" :class="{ 'is-loading' : subscribe_in_progress }" :disabled="subscribe_in_progress">SUBSCRIBE</button>
-            </div>
+            </div> -->
         </div>
 
         <div class="right-con">
@@ -33,23 +33,23 @@ export default {
     methods: {
         ...mapActions(['NEW_SUBSCRIPTION_EMAIL']),
         handleSubscribe () {
-            this.validationMessage = ''
-            this.subscribeError = false
-            /* eslint-disable */
-            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-            if (!re.test(String(this.localEmail).toLowerCase())) {
-                this.validationMessage = 'That looks like an invalid email address! Try again...'
-                this.subscribeError = true
-            } else {
-                this.NEW_SUBSCRIPTION_EMAIL(this.localEmail)
-                this.localEmail = ''
-                this.subscribeError = false
-            }
+            // this.validationMessage = ''
+            // this.subscribeError = false
+            // /* eslint-disable */
+            // var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            // if (!re.test(String(this.localEmail).toLowerCase())) {
+            //     this.validationMessage = 'That looks like an invalid email address! Try again...'
+            //     this.subscribeError = true
+            // } else {
+            //     this.NEW_SUBSCRIPTION_EMAIL(this.localEmail)
+            //     this.localEmail = ''
+            //     this.subscribeError = false
+            // }
         }
     },
     computed: {
-        ...mapGetters(['getSubscribeValidationMessage']),
-        ...mapState(['subscribe_in_progress']),
+        // ...mapGetters(['getSubscribeValidationMessage']),
+        // ...mapState(['subscribe_in_progress']),
     }
 }
 </script>

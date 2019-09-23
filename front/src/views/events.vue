@@ -1,5 +1,6 @@
 <template>
     <div class="">
+        <h1>Page coming soon!</h1>
     </div>
 </template>
 
@@ -22,5 +23,6 @@
 </script>
 
 <style lang="sass" scoped>
-
+h1
+    padding-top: 100px
 </style>

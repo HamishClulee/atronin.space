@@ -6,16 +6,16 @@
             </div>
         </div>
         <div class="navbar-right">
-            <div class="text-item">
+            <div class="text-item" v-show="checkvis('colive')">
                 <router-link :to="{ path: '/colive'}">colive</router-link>
             </div>
-            <div class="text-item">
+            <div class="text-item" v-show="checkvis('cowork')">
                 <router-link :to="{ path: '/cowork'}">cowork</router-link>
             </div>
-            <div class="text-item">
+            <div class="text-item" v-show="checkvis('events')">
                 <router-link :to="{ path: '/events'}">events</router-link>
             </div>
-            <div class="text-item">
+            <div class="text-item" v-show="checkvis('pricing')">
                 <router-link :to="{ path: '/pricing'}">pricing</router-link>
             </div>
             <div class="text-item">
@@ -114,6 +114,7 @@ export default {
 .navbar-con
     position: fixed
     width: 100%
+    top: 0
     z-index: 2
 .navbar-right
     align-items: center

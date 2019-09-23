@@ -19,7 +19,7 @@
 </template>
 <script>
 export default {
-    name: 'pricing'
+    name: 'blockpricing'
 }
 </script>
 <style lang="sass" scoped>

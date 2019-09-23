@@ -29,7 +29,7 @@
             background="#813754"
             routeto="/events">
         </imagetextblock>
-        <pricing></pricing>
+        <blockpricing></blockpricing>
         <gmap-map
             :center="{ lat: -8.638259, lng: 115.150751}"
             :zoom="14"
@@ -47,14 +47,14 @@
 <script>
     import hero from '../components/hero.vue'
     import imagetextblock from '../components/imagetextblock.vue'
-    import pricing from '../components/pricing.vue'
+    import blockpricing from '../components/blockpricing.vue'
     import rfooter from '../components/rfooter.vue'
     export default {
         name: 'home',
         components: {
             hero,
             imagetextblock,
-            pricing,
+            blockpricing,
             rfooter,
         },
         data () {
