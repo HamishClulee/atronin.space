@@ -33,14 +33,13 @@
         <gmap-map
             :center="{ lat: -8.638259, lng: 115.150751}"
             :zoom="14"
-            style="width: 100%; height: 600px">
+            style="width: 100%; height: 300px">
             <gmap-marker
                 :position="{ lat: -8.638259, lng: 115.150751}"
                 :clickable="true"
                 :draggable="true">
             </gmap-marker>
         </gmap-map>
-        <rfooter></rfooter>
     </div>
 </template>
 
@@ -48,14 +47,12 @@
     import hero from '../components/hero.vue'
     import imagetextblock from '../components/imagetextblock.vue'
     import blockpricing from '../components/blockpricing.vue'
-    import rfooter from '../components/rfooter.vue'
     export default {
         name: 'home',
         components: {
             hero,
             imagetextblock,
             blockpricing,
-            rfooter,
         },
         data () {
             return {
@@ -91,6 +88,8 @@
             letter-spacing: 4px
             @media (min-width: 0px) and (max-width: 540px)
                 font-size: 2em
+            @media (min-width: 540px) and (max-width: 780px)
+                font-size: 3em
         width: 70%
         @media (min-width: 0px) and (max-width: 540px)
             width: 90%

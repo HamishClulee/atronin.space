@@ -1,6 +1,6 @@
 <template>
     <div class="pricing-con">
-        <blockpricing></blockpricing>
+        <blockpricing :style="{ height: '60vh' }"></blockpricing>
     </div>
 </template>
 
@@ -26,5 +26,6 @@ import blockpricing from '../components/blockpricing.vue'
 
 <style lang="sass" scoped>
 .pricing-con
-    margin-top: 70px
+    padding-top: 20vh
+    background-color: $light-background
 </style>

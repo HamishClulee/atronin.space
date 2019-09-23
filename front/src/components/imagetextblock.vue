@@ -86,6 +86,8 @@
             flex-direction: column
             @media (min-width: 0px) and (max-width: 540px)
                 font-size: 2.5em
+            @media (min-width: 540px) and (max-width: 780px)
+                font-size: 3em
             // -webkit-text-fill-color: white
             // -webkit-text-stroke-width: 2.5px
             // -webkit-text-stroke-color: $primary

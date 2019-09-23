@@ -3,6 +3,10 @@
 
         <div class="left-con">
             <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+            <div class="input-con">
+                <input class="input" type="text" placeholder="Enter your email..." v-model="localEmail">
+                <button class="button" :class="{ 'is-loading' : subscribe_in_progress }" :disabled="subscribe_in_progress">SUBSCRIBE</button>
+            </div>
             <!-- <p class="subscribe-validation-message" :class="{ 'subscribe-error' : subscribeError  }">{{ getSubscribeValidationMessage }} {{ validationMessage }}</p>
             <div class="input-con">
                 <input class="input" type="text" placeholder="Enter your email..." v-model="localEmail">
@@ -20,7 +24,7 @@
     </footer>
 </template>
 <script>
-import { mapActions, mapGetters, mapState } from 'vuex'
+// import { mapActions, mapGetters, mapState } from 'vuex'
 export default {
     name: 'rfooter',
     data () {
@@ -31,7 +35,7 @@ export default {
         }
     },
     methods: {
-        ...mapActions(['NEW_SUBSCRIPTION_EMAIL']),
+        // ...mapActions(['NEW_SUBSCRIPTION_EMAIL']),
         handleSubscribe () {
             // this.validationMessage = ''
             // this.subscribeError = false
@@ -66,9 +70,14 @@ export default {
     flex-direction: row
     justify-content: center
     align-items: center
+    @media (min-width: 0px) and (max-width: 740px)
+        flex-direction: column
+        height: auto
+        padding-top: 40px
+        padding-bottom: 40px
 input
     background-color: transparent
-    width: 60%
+    width: 50%
     position: relative
     top: 6px
 .button
@@ -76,6 +85,12 @@ input
     color: $light-background
 .left-con
     width: 49%
+    @media (min-width: 0px) and (max-width: 740px)
+        flex-direction: row
+        width: 90%
 .right-con
     width: 49%
+    @media (min-width: 0px) and (max-width: 740px)
+        flex-direction: row
+        width: 90%
 </style>

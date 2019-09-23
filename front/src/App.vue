@@ -5,18 +5,21 @@
           <router-view></router-view>
       </div>
       <underconstruction v-else></underconstruction>
+      <rfooter></rfooter>
   </div>
 </template>
 
 <script>
     import underconstruction from './components/underconstruction'
     import navbar from './components/navbar.vue'
+    import rfooter from './components/rfooter.vue'
     import { mapActions, mapGetters } from 'vuex'
     export default {
         name: 'app',
         components: {
             underconstruction,
             navbar,
+            rfooter,
         },
         created() {
             this.SESSION_CHALLENGE()
