@@ -2,7 +2,7 @@
     <footer class="footer-con">
 
         <div class="left-con">
-            <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+            <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
             <div class="input-con">
                 <input class="input" type="text" placeholder="Enter your email..." v-model="localEmail">
                 <button class="button" :class="{ 'is-loading' : subscribe_in_progress }" :disabled="subscribe_in_progress">SUBSCRIBE</button>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="right-con">
-            <h1>GET IN TOUCH</h1>
+            <h2>GET IN TOUCH</h2>
             <p><strong>E_</strong> info@atronin.space</p>
             <p><strong>P_</strong> +62 812 384 114 64</p>
             <p>Jalan Raya Canggu, Gang Pratama1, Canggu, Bali.</p>
@@ -75,14 +75,25 @@ export default {
         height: auto
         padding-top: 40px
         padding-bottom: 40px
+.input-con
+    @media (min-width: 0px) and (max-width: 740px)
+        flex-direction: column
 input
     background-color: transparent
     width: 50%
     position: relative
     top: 6px
+    @media (min-width: 0px) and (max-width: 740px)
+        width: 90%
+        font-size: 1.2em
+        position: static
+        margin-bottom: 5px
 .button
     background-color: $highlight
     color: $light-background
+    @media (min-width: 0px) and (max-width: 740px)
+        width: 90%
+        font-size: 1.2em
 .left-con
     width: 49%
     @media (min-width: 0px) and (max-width: 740px)

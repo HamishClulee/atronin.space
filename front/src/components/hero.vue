@@ -32,10 +32,10 @@
         font-weight: bold
         text-shadow: 2px 1px 0px $dark-background
         @media (min-width: 540px) and (max-width: 980px)
-            margin-top: 200px
+            margin-top: 20vh
             font-size: 7em
         @media (min-width: 0px) and (max-width: 540px)
-            margin-top: 200px
+            margin-top: 20vh
             font-size: 4em
     margin-top: 70px
     width: 100%
