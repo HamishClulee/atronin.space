@@ -26,7 +26,7 @@
             imgsrc="https://atronin.space/images/social4.jpg"
             texttitle="Events"
             :textbody="body3"
-            background="#EF920D"
+            background="#813754"
             routeto="/events">
         </imagetextblock>
         <pricing></pricing>

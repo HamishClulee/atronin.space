@@ -74,5 +74,6 @@
         p
             color: $font-light
             padding: 0 20px 0 70px
+            font-family: 'Open Sans', sans serif
 </style>
 ''
