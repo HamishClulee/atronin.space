@@ -11,25 +11,6 @@
             <p>If you would like to talk to us about taking a room or a desk @RONIN contact us on the whatsapp number below.</p>
             <h2>+62 812 384 114 64</h2>
         </div>
-        <div class="images-con">
-            <gallery :images="images" :index="index" @close="index = null"></gallery>
-            <div class="images">
-                <div
-                    class="image"
-                    v-for="(image, imageIndex) in images"
-                    :key="imageIndex"
-                    @click="index = imageIndex"
-                    :style="{
-                        backgroundImage: 'url(' + image + ')',
-                        width: '30vw',
-                        height: '30vw',
-                        backgroundPosition: 'top',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundSize: 'cover'
-                    }">
-                </div>
-            </div>
-        </div>
         <gmap-map
             :center="{ lat: -8.638259, lng: 115.150751}"
             :zoom="14"
@@ -45,24 +26,12 @@
 
 <script>
     import { NODE } from '../axios'
-    import Gallery from '../components/gallery.vue';
     export default {
         name: 'underconstruction',
         components: {
-            'gallery': Gallery
         },
         data () {
             return {
-                images: [
-                    "https://atronin.space/images/social.jpg",
-                    "https://atronin.space/images/social1.jpg",
-                    "https://atronin.space/images/social3.jpg",
-                    "https://atronin.space/images/social4.jpg",
-                    "https://atronin.space/images/work.jpg",
-                    "https://atronin.space/images/work2.jpg",
-                    "https://atronin.space/images/work1.jpg",
-                ],
-                index: null
             }
         },
         mounted () {
