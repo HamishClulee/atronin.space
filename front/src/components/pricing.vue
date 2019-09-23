@@ -12,6 +12,9 @@
             <h4 class="price">Monthly</h4>
             <h5 class="duration">7 million</h5>
         </div>
+        <div class="cta-con">
+            <button class="button">BOOK A SPOT</button>
+        </div>
     </div>
 </template>
 <script>
@@ -20,6 +23,16 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+.cta-con
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    .button
+        width: 50%
+        margin: 15px auto
+        background-color: $highlight
+        color: $light-background
 .pricing-con
     display: flex
     flex-direction: column
@@ -36,6 +49,8 @@ export default {
         display: flex
         justify-content: flex-end
         width: 300px
+        @media (min-width: 0px) and (max-width: 540px)
+            font-size: 2em
     .duration
         font-size: 4em
         padding-left: 30px
@@ -43,4 +58,6 @@ export default {
         display: flex
         justify-content: flex-start
         width: 300px
+        @media (min-width: 0px) and (max-width: 540px)
+            font-size: 2em
 </style>

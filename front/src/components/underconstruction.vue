@@ -35,7 +35,6 @@
             :zoom="14"
             style="width: 100%; height: 600px">
             <gmap-marker
-                :key="index"
                 :position="{ lat: -8.638259, lng: 115.150751}"
                 :clickable="true"
                 :draggable="true">

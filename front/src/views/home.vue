@@ -8,7 +8,7 @@
         <imagetextblock
             :imgleft="true"
             imgsrc="https://atronin.space/images/work1.jpg"
-            texttitle="Co Live"
+            texttitle="Co-Living"
             :textbody="body1"
             background="#212941"
             routeto="/colive">
@@ -16,7 +16,7 @@
         <imagetextblock
             :imgleft="false"
             imgsrc="https://atronin.space/images/social1.jpg"
-            texttitle="Co Work"
+            texttitle="Co-Working"
             :textbody="body2"
             background="#4EAA91"
             routeto="/cowork">
@@ -31,15 +31,14 @@
         </imagetextblock>
         <pricing></pricing>
         <gmap-map
-        :center="{ lat: -8.638259, lng: 115.150751}"
-        :zoom="14"
-        style="width: 100%; height: 600px">
-        <gmap-marker
-            :key="index"
-            :position="{ lat: -8.638259, lng: 115.150751}"
-            :clickable="true"
-            :draggable="true">
-        </gmap-marker>
+            :center="{ lat: -8.638259, lng: 115.150751}"
+            :zoom="14"
+            style="width: 100%; height: 600px">
+            <gmap-marker
+                :position="{ lat: -8.638259, lng: 115.150751}"
+                :clickable="true"
+                :draggable="true">
+            </gmap-marker>
         </gmap-map>
         <rfooter></rfooter>
     </div>
@@ -86,11 +85,15 @@
         margin-bottom: 50px
         h1
             margin-bottom: 30px
-            font-size: 5em
+            font-size: 4.5em
             color: $font
             font-weight: bold
             letter-spacing: 4px
+            @media (min-width: 0px) and (max-width: 540px)
+                font-size: 2em
         width: 70%
+        @media (min-width: 0px) and (max-width: 540px)
+            width: 90%
         margin-left: auto
         margin-right: auto
         text-align: center
