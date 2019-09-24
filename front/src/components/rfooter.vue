@@ -5,7 +5,7 @@
             <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
             <div class="input-con">
                 <input class="input" type="text" placeholder="Enter your email..." v-model="localEmail">
-                <button class="button" :class="{ 'is-loading' : subscribe_in_progress }" :disabled="subscribe_in_progress">SUBSCRIBE</button>
+                <button class="button">SUBSCRIBE</button>
             </div>
             <!-- <p class="subscribe-validation-message" :class="{ 'subscribe-error' : subscribeError  }">{{ getSubscribeValidationMessage }} {{ validationMessage }}</p>
             <div class="input-con">

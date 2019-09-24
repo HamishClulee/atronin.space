@@ -33,20 +33,17 @@
                 <div class="canvas-item" @click="togglecanvas" v-show="checkvis('home')">
                     <router-link :to="{ path: '/'}">home</router-link>
                 </div>
-                <div class="canvas-item" @click="togglecanvas" v-show="checkvis('colive')">
-                    <router-link :to="{ path: '/colive'}">colive</router-link>
-                </div>
-                <div class="canvas-item" @click="togglecanvas" v-show="checkvis('cowork')">
-                    <router-link :to="{ path: '/cowork'}">cowork</router-link>
-                </div>
                 <div class="canvas-item" @click="togglecanvas" v-show="checkvis('events')">
                     <router-link :to="{ path: '/events'}">events</router-link>
                 </div>
                 <div class="canvas-item" @click="togglecanvas" v-show="checkvis('pricing')">
                     <router-link :to="{ path: '/pricing'}">pricing</router-link>
                 </div>
+                <div class="canvas-item" @click="togglecanvas" v-show="checkvis('thevilla')">
+                    <router-link :to="{ path: '/thevilla'}">the villa</router-link>
+                </div>
                 <div class="canvas-item" @click="togglecanvas">
-                    <button class="button cta">book</button>
+                    <button class="button cta-canvas">book</button>
                 </div>
             </div>
             
@@ -82,6 +79,7 @@ export default {
     bottom: 0
     left: 0
     right: 0
+    transition: all 1s ease
     background-color: $secondary
     color: $light-background
     height: 100vh
@@ -94,13 +92,18 @@ export default {
     .canvas-text-con
         width: 400px
         text-align: right
-        margin: 50px 20px 0 0
+        margin: 30px 20px 0 0
         a
             font-size: 3em
 
 .cta
     background-color: $highlight
     color: $light-background
+.cta-canvas
+    background-color: $highlight
+    color: $light-background
+    width: 250px
+    margin-top: 15px
 .navbar-con, .navbar-left, .navbar-right
     display: flex
     flex-direction: row

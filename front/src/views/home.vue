@@ -74,7 +74,7 @@
         data () {
             return {
                 body1: `<p>Live where you work.</p><p>No commute, no office politics, just great people and no barriers to achieving your goals.</p>`,
-                body2: ``,
+                body2: `<p>Spacious rooms, clean ensuite bathrooms, quality furnishings.</p><p>Take a dip in the pool!</p><p>Cook in comfort in an enclosed kitchen, which has everything you need, including ample bench space.</p>`,
                 body3: `<p>Weekly BBQ's around the pool?</p><p>Tours with one of our staff members?</p><p>Incredible networking potential?</p><p>Cooking classes for awesome local dishes?</p><p>We do it all.</p>`,
             }
         },

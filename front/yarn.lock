@@ -1256,7 +1256,7 @@ bluebird@^3.1.1, bluebird@^3.5.1:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.3.tgz#7d01c6f9616c9a51ab0f8c549a79dfe6ec33efa7"
 
-blueimp-gallery@^2.33.0, blueimp-gallery@^2.35.0:
+blueimp-gallery@^2.35.0:
   version "2.35.0"
   resolved "https://registry.yarnpkg.com/blueimp-gallery/-/blueimp-gallery-2.35.0.tgz#96d5792138e3365ce83d0a4afd84a7f803612b29"
   integrity sha512-/dT0K8Vh2FlmKW+PILbygoZ4ramOBM8x2e85JTHOXImI2v2flaBBInQNu7nPonCkWLFejfsf54oHdty1QQslog==
@@ -2464,6 +2464,11 @@ entities@~1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
 
+epic-spinners@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/epic-spinners/-/epic-spinners-1.1.0.tgz#293d67593557572b02ca2f503c49706fc2a57cb8"
+  integrity sha512-nFyHmFuBFO6LpT37Xu68lQqKDYK50gXoZ6Yj/mpoS1Uslku0YkMtAGDzH8nbeFSiifAIoT1rUDB3S7e/ifnnxg==
+
 errno@^0.1.3, errno@~0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/errno/-/errno-0.1.7.tgz#4684d71779ad39af177e3f007996f7c67c852618"
@@ -3237,6 +3242,11 @@ gzip-size@^5.0.0:
   dependencies:
     duplexer "^0.1.1"
     pify "^3.0.0"
+
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+  integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
 
 handle-thing@^1.2.5:
   version "1.2.5"
@@ -4061,6 +4071,16 @@ levn@^0.3.0, levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
+
+lingallery@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/lingallery/-/lingallery-1.3.0.tgz#2507176b6e4d1e8f062f15d724957eef9ba78483"
+  integrity sha512-wxDtJOX6pDHWs5A6+zz30WH+hYININMftijuFVnqWLrznzUrsatea7XFtU9SIOBtsc+ASzgqdNj04WH9/Nh8eQ==
+  dependencies:
+    epic-spinners "^1.1.0"
+    hammerjs "^2.0.8"
+    vue "^2.6.10"
+    vue-async-computed "^3.7.0"
 
 load-json-file@^1.0.0:
   version "1.1.0"
@@ -6824,6 +6844,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-async-computed@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/vue-async-computed/-/vue-async-computed-3.7.0.tgz#1ca3fc2743c9e3d4399b506f3e107e2141fdc34c"
+  integrity sha512-TyP37QJZK8pvN14wxBcXtt9TOjkpYYdndklABZNH+X1ZjeyM/krndloiS1DeFUg95MqIi5wzjevOPu6UTcD7pg==
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "http://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
@@ -6845,13 +6870,6 @@ vue-eslint-parser@^3.2.1:
     espree "^4.1.0"
     esquery "^1.0.1"
     lodash "^4.17.11"
-
-vue-gallery@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/vue-gallery/-/vue-gallery-2.0.0.tgz#07d29e9169701d7d19b6b5f643038f1d50606329"
-  integrity sha512-6BCItrHwH0v0p2T8Pf6iAUGOi7sZtDt/WLn+DiRznfMec/WPPjT/udBABChkyGGzdn/FBHoF768ITAjLDXfMLw==
-  dependencies:
-    blueimp-gallery "^2.33.0"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.1"
@@ -6900,6 +6918,11 @@ vue2-google-maps@^0.10.7:
 vue@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
+
+vue@^2.6.10:
+  version "2.6.10"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
+  integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
 
 vuex@^3.0.1:
   version "3.0.1"
