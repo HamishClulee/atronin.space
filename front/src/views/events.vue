@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="page-con">
         <h1>Page coming soon!</h1>
     </div>
 </template>

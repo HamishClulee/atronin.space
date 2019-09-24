@@ -6,11 +6,8 @@
             </div>
         </div>
         <div class="navbar-right">
-            <div class="text-item" v-show="checkvis('colive')">
-                <router-link :to="{ path: '/colive'}">colive</router-link>
-            </div>
-            <div class="text-item" v-show="checkvis('cowork')">
-                <router-link :to="{ path: '/cowork'}">cowork</router-link>
+            <div class="text-item" v-show="checkvis('thevilla')">
+                <router-link :to="{ path: '/thevilla'}">the villa &amp; gallery</router-link>
             </div>
             <div class="text-item" v-show="checkvis('events')">
                 <router-link :to="{ path: '/events'}">events</router-link>

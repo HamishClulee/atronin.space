@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import home from '../views/home.vue'
-import colive from '../views/colive.vue'
-import cowork from '../views/cowork.vue'
+import thevilla from '../views/thevilla.vue'
 import events from '../views/events.vue'
 import book from '../views/book.vue'
 import pricing from '../views/pricing.vue'
@@ -17,14 +16,9 @@ export default new Router({
             component: home
         },
         {
-            path: '/colive',
-            name: 'colive',
-            component: colive
-        },
-        {
-            path: '/cowork',
-            name: 'cowork',
-            component: cowork
+            path: '/thevilla',
+            name: 'thevilla',
+            component: thevilla
         },
         {
             path: '/events',

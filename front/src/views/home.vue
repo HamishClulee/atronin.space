@@ -3,7 +3,24 @@
         <hero></hero>
         <div class="home-cont">
             <h1>YOU@RONIN</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>
+                Ronin is a co-work-co-live villa in Canggu. We are focused on providing the best possible experience for 
+                digital nomads. We are nomads ourselves and found that for some people
+                co-working spaces were to noisy and made it hard to focus, and that living alone could become lonely over time.
+            </p>
+            <p>
+                @RONIN is our answer to those problems. A six
+                bedroom villa, filled with people in the same siutation as you, set up for co-working. Lightening fast internet, 
+                lots of desk space and comfortable chairs. All rooms are well furnished and spacious with private bathrooms. 
+                Let us take care of everything else, and you can focus on getting shit done.</p>
+             <p>
+                We promote a social environment with events like BBQ's, tours and cooking classes. 
+                We also screen our guests to ensure a good social fit overall. Settle in to a life focused on productivity during the day
+                and spending time with like minded people in the evenings and weekends.
+            </p>
+            <div class="cta-con">
+                <button class="button cta">BOOK A ROOM NOW</button>
+            </div>
         </div>
         <imagetextblock
             :imgleft="true"
@@ -16,10 +33,10 @@
         <imagetextblock
             :imgleft="false"
             imgsrc="https://atronin.space/images/social1.jpg"
-            texttitle="Co-Working"
+            texttitle="The Villa"
             :textbody="body2"
             background="#4EAA91"
-            routeto="/cowork">
+            routeto="/thevilla">
         </imagetextblock>
         <imagetextblock
             :imgleft="true"
@@ -56,9 +73,9 @@
         },
         data () {
             return {
-                body1: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-                body2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-                body3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                body1: `<p>Live where you work.</p><p>No commute, no office politics, just great people and no barriers to achieving your goals.</p>`,
+                body2: ``,
+                body3: `<p>Weekly BBQ's around the pool?</p><p>Tours with one of our staff members?</p><p>Incredible networking potential?</p><p>Cooking classes for awesome local dishes?</p><p>We do it all.</p>`,
             }
         },
         mounted () {

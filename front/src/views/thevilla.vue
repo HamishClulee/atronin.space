@@ -1,12 +1,12 @@
 <template>
-    <div class="">
-        <h1>Page coming soon!</h1>
+    <div class="page-con">
+        <h1>Images and words coming soon!</h1>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'colive',
+        name: 'thevilla',
         components: {
         },
         data () {
