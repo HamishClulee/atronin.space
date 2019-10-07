@@ -59,7 +59,7 @@ figure
     width: 100%
     height: 100%
     object-fit: cover
-    border: 1px solid lighten($secondary, 60)
+    border: 1px solid lighten($secondary, 61)
 img
     opacity: 1
     display: block
