@@ -73,7 +73,7 @@ export default {
 </script>
 <style lang="sass" scoped>
 .canvas-nav
-    z-index: 5
+    z-index: 6
     position: absolute
     top: 0
     bottom: 0

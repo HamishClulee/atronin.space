@@ -11,7 +11,7 @@
             <p>If you would like to talk to us about taking a room or a desk @RONIN contact us on the whatsapp number below.</p>
             <h2>+62 812 384 114 64</h2>
         </div>
-        <gmap-map
+        <!-- <gmap-map
             :center="{ lat: -8.638259, lng: 115.150751}"
             :zoom="14"
             style="width: 100%; height: 600px">
@@ -20,7 +20,7 @@
                 :clickable="true"
                 :draggable="true">
             </gmap-marker>
-        </gmap-map>
+        </gmap-map> -->
     </div>
 </template>
 

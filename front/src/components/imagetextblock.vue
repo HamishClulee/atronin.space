@@ -4,8 +4,8 @@
             <img :src="imgsrc" />
         </div>
         <div class="text-con">
-            <h2 :style="{ color: 'white' }">{{ texttitle }}</h2>
-            <p :style="{ color: 'white' }" v-html="textbody"></p>
+            <h2 :style="textdark ? { color: '#3F3F3C' } : { color: 'white' }" :class="textdark ? 'after-col' : ''">{{ texttitle }}</h2>
+            <p :style="textdark ? { color: '#3F3F3C' } : { color: 'white' }" v-html="textbody"></p>
         </div>
     </div>
 </template>
@@ -72,7 +72,7 @@
                 transition: all 0.8s ease
     .text-con
         width: 45%
-        padding: 30px
+        padding: 20px
         @media (min-width: 540px) and (max-width: 980px)
             width: 80%
         @media (min-width: 0px) and (max-width: 540px)
@@ -88,9 +88,6 @@
                 font-size: 2.5em
             @media (min-width: 540px) and (max-width: 780px)
                 font-size: 3em
-            // -webkit-text-fill-color: white
-            // -webkit-text-stroke-width: 2.5px
-            // -webkit-text-stroke-color: $primary
             &:after
                 position: relative
                 content: ""
@@ -99,9 +96,12 @@
                 background-color: $font-dark
                 top: 5px
                 left: 3px
+        .after-col
+            &:after
+                background-color: $highlight !important
         p
             color: $font-light
-            padding: 0 20px 0 70px
+            padding: 0 20px 0 40px
             font-family: 'Open Sans', sans serif
             @media (min-width: 0px) and (max-width: 540px)
                 padding: 0 10px 0 30px
