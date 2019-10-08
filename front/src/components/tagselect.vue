@@ -1,8 +1,19 @@
 <template>
     <div class="tag-select">
-        <div class="tag" v-for="(v, n, i) in tags" :key="i" @click="tagselected(n)">
-            #{{ v }}
+        <div
+            class="tag"
+            v-show="active === null || active === n"
+            v-for="(v, n, i) in tags"
+            :key="i"
+            @click="tagselected(n)">
+                #{{ v }}
         </div>
+        <button
+            class="button clear-tags"
+            v-if="active !== null"
+            @click="tagselected(null)">
+                Clear Tags
+        </button>
     </div>
 </template>
 <script>
@@ -14,10 +25,12 @@ export default {
     data () {
         return {
             tags: _manifest.TAGS,
+            active: null
         }
     },
     methods: {
         tagselected(n) {
+            this.active = n
             this.$parent.$emit('tag-selected', n)
         }
     },

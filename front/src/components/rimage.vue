@@ -17,16 +17,15 @@ export default {
     props: {
         source: {
             type: String,
-            required: true,
+            required: false,
+            default: '',
         },
         alttext: {
             type: String,
-            required: true,
+            required: false,
+            default: '',
         },
-        index: {
-            type: Number,
-            required: true,
-        },
+        index: Number,
     },
     data () {
         return {

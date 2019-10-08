@@ -5,12 +5,11 @@
         </div>
         <div class="gallery" :style="style">
             <rimage
-                v-for="(v, n, i) in images"
-                :key="n"
-                :source="n"
+                v-for="(v, i) in images"
+                :key="v.path"
+                :source="v.path"
                 :alttext="v.alt"
-                :index="i"
-                :overlay="v.caption">
+                :index="i">
             </rimage>
         </div>
     </div>
@@ -25,36 +24,36 @@ export default {
     components: { rimage, tagselect },
     data () {
         return {
+            ogimages: _manifest.images,
             images: _manifest.images,
+            tags: _manifest.TAGS,
             style: {
                 gridTemplateRows: `repeat(${this.length}, 20vw)`
             },
-            length: this.getlen,
-            activetag: null
+            length: _manifest.images.length,
         }
     },
     mounted () {
         this.$on('tag-selected', (n) => {
-            this.activetag = n
-            if (this.activetag !== null) {
-                let res = {}
-                for (let key in _manifest.images) {
-                    if (_manifest.images.hasOwnProperty(key) && _manifest.images[key].tags.indexOf(n) !== -1) {
-                        res[key] = _manifest.images[key]
-                    }
-                }
-                this.images = res
+            if (n !== null) {
+                this.images = []
+                this.length = 0
+                this.ogimages.forEach(element => {
+                    if (element.tags.indexOf(this.tags[n]) !== -1) this.images.push(element)                
+                })
+                this.length = this.ogimages.length
+            
             } else {
-                this.images = _manifest.images
+                this.ogimages.forEach(element => {
+                    this.images.push(element)
+                })
+                this.length = this.ogimages.length
             }
         })
     },
     methods: {
     },
     computed: {
-        getlen() {
-            return Object.keys(this.images).length
-        }
     }
 }
 </script>
