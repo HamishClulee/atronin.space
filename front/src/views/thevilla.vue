@@ -1,8 +1,11 @@
 <template>
     <div class="page-con">
+        <div class="tags-con">
+            <tagselect></tagselect>
+        </div>
         <div class="gallery" :style="style">
             <rimage
-                v-for="(v, n, i) in manifest.images"
+                v-for="(v, n, i) in images"
                 :key="n"
                 :source="n"
                 :alttext="v.alt"
@@ -16,55 +19,54 @@
 <script>
 import _manifest from '../imagemanifest.js'
 import rimage from '../components/rimage'
+import tagselect from '../components/tagselect'
 export default {
     name: 'thevilla',
-    components: { rimage },
+    components: { rimage, tagselect },
     data () {
         return {
-            manifest: _manifest,
+            images: _manifest.images,
             style: {
-                gridTemplateRows: `repeat(${Object.keys(_manifest.images).length}, 20vw)`
-            }
+                gridTemplateRows: `repeat(${this.length}, 20vw)`
+            },
+            length: this.getlen,
+            activetag: null
         }
     },
     mounted () {
-        // debugger
+        this.$on('tag-selected', (n) => {
+            this.activetag = n
+            if (this.activetag !== null) {
+                let res = {}
+                for (let key in _manifest.images) {
+                    if (_manifest.images.hasOwnProperty(key) && _manifest.images[key].tags.indexOf(n) !== -1) {
+                        res[key] = _manifest.images[key]
+                    }
+                }
+                this.images = res
+            } else {
+                this.images = _manifest.images
+            }
+        })
     },
     methods: {
     },
     computed: {
+        getlen() {
+            return Object.keys(this.images).length
+        }
     }
 }
 </script>
 
 <style lang="sass" scoped>
+.page-con
+    margin-top: 120px
 .gallery
-    margin-top: 150px
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 0
     width: 70%
     margin-left: auto
     margin-right: auto
-figure
-    margin: 10px
-.gallery__img
-    width: 100%
-    height: 100%
-    object-fit: cover
-.gallery__item--1
-    grid-row-start: 1
-    grid-column-start: 1
-    grid-row-end: 2
-    grid-column-end: 2
-.gallery__item--2
-    grid-row-start: 1
-    grid-column-start: 2
-    grid-row-end: 2
-    grid-column-end: 3
-.gallery__item--2
-    grid-row-start: 1
-    grid-column-start: 3
-    grid-row-end: 2
-    grid-column-end: 4
 </style>
