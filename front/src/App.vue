@@ -2,7 +2,7 @@
   <div class="god-div">
       <div v-if="isauthed">
           <navbar></navbar>
-          <gallerymodal v-if="showgallery"></gallerymodal>
+          <gallerymodal v-if="showgallery" :opensource="gallerysource"></gallerymodal>
           <router-view></router-view>
       </div>
       <underconstruction v-else></underconstruction>
@@ -26,11 +26,21 @@
         },
         data() {
             return {
-                showgallery: true,
+                showgallery: false,
+                gallerysource: null,
             }
         },
         created() {
             this.SESSION_CHALLENGE()
+        },
+        mounted() {
+            this.$root.$on('close-modal', () => {
+                this.showgallery = false
+            })
+            this.$root.$on('open-gallery', (source) => {
+                this.gallerysource = source
+                this.showgallery = true
+            })
         },
         methods: {
             ...mapActions(['SESSION_CHALLENGE']),

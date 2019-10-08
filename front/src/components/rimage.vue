@@ -1,5 +1,6 @@
 <template>
     <figure
+        @click="opengallery(source)"
         class="gallery__item"
         :style="style">
             <img 
@@ -38,6 +39,9 @@ export default {
         }
     },
     methods: {
+        opengallery(path) {
+            this.$root.$emit('open-gallery', path)
+        }
     },
     computed: {
     }
