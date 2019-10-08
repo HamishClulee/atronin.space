@@ -2,6 +2,7 @@
   <div class="god-div">
       <div v-if="isauthed">
           <navbar></navbar>
+          <gallerymodal v-if="showgallery"></gallerymodal>
           <router-view></router-view>
       </div>
       <underconstruction v-else></underconstruction>
@@ -13,6 +14,7 @@
     import underconstruction from './components/underconstruction'
     import navbar from './components/navbar.vue'
     import rfooter from './components/rfooter.vue'
+    import gallerymodal from './components/gallerymodal.vue'
     import { mapActions, mapGetters } from 'vuex'
     export default {
         name: 'app',
@@ -20,6 +22,12 @@
             underconstruction,
             navbar,
             rfooter,
+            gallerymodal,
+        },
+        data() {
+            return {
+                showgallery: true,
+            }
         },
         created() {
             this.SESSION_CHALLENGE()

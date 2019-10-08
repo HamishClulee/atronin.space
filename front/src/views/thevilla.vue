@@ -3,10 +3,10 @@
         <div class="tags-con">
             <tagselect></tagselect>
         </div>
-        <div class="gallery" :style="style">
+        <div class="gallery" :style="style" v-if="!loading">
             <rimage
                 v-for="(v, i) in images"
-                :key="v.path"
+                :key="i"
                 :source="v.path"
                 :alttext="v.alt"
                 :index="i">
@@ -31,10 +31,12 @@ export default {
                 gridTemplateRows: `repeat(${this.length}, 20vw)`
             },
             length: _manifest.images.length,
+            loading: false,
         }
     },
     mounted () {
         this.$on('tag-selected', (n) => {
+            this.loading = true
             if (n !== null) {
                 this.images = []
                 this.length = 0
@@ -42,13 +44,13 @@ export default {
                     if (element.tags.indexOf(this.tags[n]) !== -1) this.images.push(element)                
                 })
                 this.length = this.ogimages.length
-            
             } else {
                 this.ogimages.forEach(element => {
                     this.images.push(element)
                 })
                 this.length = this.ogimages.length
             }
+            this.loading = false
         })
     },
     methods: {
@@ -68,4 +70,5 @@ export default {
     width: 70%
     margin-left: auto
     margin-right: auto
+    min-height: 80vh
 </style>
