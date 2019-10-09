@@ -18,373 +18,913 @@ const TAGS = {
 }
 
 const images = [
-    {   
-        path: 'BalconyGazebo.png',
-        alt: `A gazebo surrounded by plants`,
-        tags: [TAGS.outdoor, TAGS.villa, TAGS.cowork],
-        caption: `The upstairs gazebo, has a powerpoint to plug in laptop and phone and a light for working at night!`,
+    {
+      "path": "BalconyGazebo.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq4.jpg',
-        alt: `people talking at bbq around a pool`,
-        tags: [TAGS.outdoor, TAGS.villa, TAGS.social, TAGS.bbq, TAGS.events],
-        caption: `One of the early BBQ's`,
+    {
+      "path": "bbq25.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'coworking2.jpg',
-        alt: `Man working on laptop`,
-        tags: [TAGS.cowork],
-        caption: `Jaden working hard in the early days of the coworking space.`,
+    {
+      "path": "downstairsgarden.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'PoolLounger.png',
-        alt: `couch at the end of a pool`,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: `Downstairs couch, doors for the living area, room 3, room 2 and room 1.`,
+    {
+      "path": "living7.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room2bed.jpg',
-        alt: `bed with white linens`,
-        tags: [TAGS.room2, TAGS.villa],
-        caption: `Room 2 looking pretty!`,
+    {
+      "path": "outdoor9.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room4desk.jpg',
-        alt: `a desk and wardrobe`,
-        tags: [TAGS.room4, TAGS.rooms],
-        caption: `A recently renovated room 4.`,
+    {
+      "path": "room17.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room6couch.jpg',
-        alt: `couch with an orange cushion`,
-        tags: [TAGS.rooms, TAGS.room6],
-        caption: `Room 6 has its own seating area.`,
+    {
+      "path": "room32.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'work1.jpg',
-        alt: `people working on laptops`,
-        tags: [TAGS.cowork, TAGS.social],
-        caption: `Allison and Glenn building things, not at all staged xD`,
+    {
+      "path": "room53.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq5.jpg',
-        alt: `a group of people socialize around a pool`,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor, TAGS.pool],
-        caption: `The second ever BBQ, Henry deep in explanation mode.`,
+    {
+      "path": "room68.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq10.jpg',
-        alt: `people socializing around a pool`,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor, TAGS.pool],
-        caption: ``,
+    {
+      "path": "bbq10.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'coworking3.jpg',
-        alt: ``,
-        tags: [TAGS.cowork],
-        caption: ``,
+    {
+      "path": "bbq26.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'fromgate.png',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "downstairspool.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'lounge.jpg',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.cowork],
-        caption: ``,
+    {
+      "path": "living8.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'PoolParkinglot.png',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "outdoorcouchandpool.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'Room2BedWardrobe.png',
-        alt: ``,
-        tags: [TAGS.room2, TAGS.villa],
-        caption: ``,
+    {
+      "path": "room18.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room4full.jpg',
-        alt: ``,
-        tags: [TAGS.room4, TAGS.rooms],
-        caption: ``,
+    {
+      "path": "room34.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'social1.jpg',
-        alt: ``,
-        tags: [TAGS.cowork],
-        caption: ``,
+    {
+      "path": "room54.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'work2.jpg',
-        alt: ``,
-        tags: [TAGS.cowork],
-        caption: ``,
+    {
+      "path": "room69.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq11.jpg',
-        alt: ``,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "bbq11.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq6.jpg',
-        alt: ``,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "bbq27.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'coworking.jpg',
-        alt: ``,
-        tags: [TAGS.cowork],
-        caption: ``,
+    {
+      "path": "footer.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'GazeboStairs.png',
-        alt: ``,
-        tags: [TAGS.cowork],
-        caption: ``,
+    {
+      "path": "living9.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'LoungerLivingroom.png',
-        alt: ``,
-        tags: [TAGS.cowork],
-        caption: ``,
+    {
+      "path": "poolandcouch.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'Room1BathroomBedroom.png',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room1],
-        caption: ``,
+    {
+      "path": "room19.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room3bathroom.jpg',
-        alt: ``,
-        tags: [TAGS.cowork, TAGS.room3],
-        caption: ``,
+    {
+      "path": "room35.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room4wardrobe.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room4],
-        caption: ``,
+    {
+      "path": "room55.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'social3.jpg',
-        alt: ``,
-        tags: [TAGS.social, TAGS.social],
-        caption: ``,
+    {
+      "path": "room6bed.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'work.jpg',
-        alt: ``,
-        tags: [TAGS.cowork],
-        caption: ``,
+    {
+      "path": "bbq12.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq12.jpg',
-        alt: ``,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "bbq28.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq7.jpg',
-        alt: ``,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "GazeboStairs.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'downstairscouch.jpg',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "logo-large-dark.png",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'outdoorcouchandpool.jpg',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "pool.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room1bathroomdoor.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room1],
-        caption: ``,
+    {
+      "path": "room1bathroomdoor.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room4backwall.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room4],
-        caption: ``,
+    {
+      "path": "room36.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room5bedanddoor.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room5],
-        caption: ``,
+    {
+      "path": "room56.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'social4.jpg',
-        alt: ``,
-        tags: [TAGS.social, TAGS.cowork],
-        caption: ``,
+    {
+      "path": "room6couchandbed.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq1.jpg',
-        alt: ``,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "bbq13.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq8.jpg',
-        alt: ``,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "bbq29.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'downstairsgarden.jpg',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "kara1.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'kitchen.jpg',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.kitchen],
-        caption: ``,
+    {
+      "path": "logo-large-light.png",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'poolandcouch.jpg',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "PoolLounger.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'Room1BedPool.png',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room1],
-        caption: ``,
+    {
+      "path": "Room1BedPool.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room4bed1.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room4],
-        caption: ``,
+    {
+      "path": "room37.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room5bed.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room5],
-        caption: ``,
+    {
+      "path": "room57.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'social6.jpg',
-        alt: ``,
-        tags: [TAGS.cowork],
-        caption: ``,
+    {
+      "path": "room6couch.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq2.jpg',
-        alt: ``,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "bbq14.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq9.jpg',
-        alt: ``,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "bbq2.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'downstairsgazebo.jpg',
-        alt: ``,
-        tags: [TAGS.cowork, TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "kara2.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'PoolGazebo.png',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "logo-small-dark.png",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room2bathroom.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room2],
-        caption: ``,
+    {
+      "path": "PoolParkinglot.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room4bedend.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room4],
-        caption: ``,
+    {
+      "path": "room22.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room6bed.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room6],
-        caption: ``,
+    {
+      "path": "room38.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'social.jpg',
-        alt: ``,
-        tags: [TAGS.cowork],
-        caption: ``,
+    {
+      "path": "room58.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'bbq3.jpg',
-        alt: ``,
-        tags: [TAGS.events, TAGS.bbq, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "roomk21.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'coworking1.jpg',
-        alt: ``,
-        tags: [TAGS.cowork],
-        caption: ``,
+    {
+      "path": "bbq15.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'downstairspool.jpg',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "bbq30.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'pool.jpg',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "kara3.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'Room2BedVanity.png',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room2],
-        caption: ``,
+    {
+      "path": "lounge.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room4bed.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room4],
-        caption: ``,
+    {
+      "path": "room110.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'room6couchandbed.jpg',
-        alt: ``,
-        tags: [TAGS.rooms, TAGS.room4],
-        caption: ``,
+    {
+      "path": "room23.jpg",
+      "tags": [
+        
+      ]
     },
-    {   
-        path: 'upstairsgazebo.jpg',
-        alt: ``,
-        tags: [TAGS.villa, TAGS.outdoor],
-        caption: ``,
+    {
+      "path": "room39.jpg",
+      "tags": [
+        
+      ]
     },
-]
+    {
+      "path": "room59.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "social1.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq16.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq3.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "living10.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "outdoor10.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room111.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room24.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room3bathroom.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room5bedanddoor.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "social3.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq17.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq4.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "living11.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "outdoor11.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room112.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room25.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room4backwall.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room5bed.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "social4.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq18.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq5.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "living12.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "outdoor12.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room113.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room26.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room4bed1.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room610.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "social6.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq19.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq6.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "living13.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "outdoor1.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room114.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room27.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room4bedend.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room61.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "social.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq1.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq7.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "living1.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "outdoor2.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room1-1.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room2bathroom.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room4bed.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room62.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "upstairsgazebo.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq20.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq8.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "living2.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "outdoor3.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room-1-2.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room2bed.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room4desk.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room63.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "work1.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq21.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq9.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "living3.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "outdoor4.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room-1-3.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "Room2BedWardrobe.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room4full.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room64.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "work2.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq22.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "coworking1.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "living4.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "outdoor6.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room-1-4.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room310.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room4wardrobe.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room65.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "work.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq23.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "coworking.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "living5.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "outdoor7.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room15.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room311.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room51.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room66.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "bbq24.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "downstairscouch.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "living6.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "outdoor8.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room16.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room31.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room52.jpg",
+      "tags": [
+        
+      ]
+    },
+    {
+      "path": "room67.jpg",
+      "tags": [
+        
+      ]
+    }
+  ]
 
 // const assets = [
 //     'logo-large-light.png':{
