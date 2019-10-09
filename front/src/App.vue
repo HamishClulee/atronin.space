@@ -16,7 +16,6 @@
     import rfooter from './components/rfooter.vue'
     import gallerymodal from './components/gallerymodal.vue'
     import { mapActions, mapGetters } from 'vuex'
-    // import trans from './trans.js' 
     export default {
         name: 'app',
         components: {
@@ -42,15 +41,6 @@
                 this.index = index
                 this.showgallery = true
             })
-            // let res = []
-            // trans.transed.forEach(v => {
-            //     let obj = {
-            //         path: v,
-            //         tags: [],
-            //     }
-            //     res.push(obj)
-            // })
-            // console.log(JSON.stringify(res))
         },
         methods: {
             ...mapActions(['SESSION_CHALLENGE']),
