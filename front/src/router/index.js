@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '../views/home.vue'
-import thevilla from '../views/thevilla.vue'
-import events from '../views/events.vue'
-import book from '../views/book.vue'
-import pricing from '../views/pricing.vue'
-import notfound from '../views/notfound'
+const home = () => import('../views/home.vue')
+const thevilla = () => import('../views/thevilla.vue')
+const gallery = () => import('../views/gallery.vue')
+const events = () => import('../views/events.vue')
+const book = () => import('../views/book.vue')
+const pricing = () => import('../views/pricing.vue')
+const notfound = () => import('../views/notfound')
+
 Vue.use(Router)
 export default new Router({
     mode: 'history',
@@ -19,6 +21,11 @@ export default new Router({
             path: '/thevilla',
             name: 'thevilla',
             component: thevilla
+        },
+        {
+            path: '/gallery',
+            name: 'gallery',
+            component: gallery
         },
         {
             path: '/events',

@@ -6,13 +6,16 @@
             </div>
         </div>
         <div class="navbar-right">
-            <div class="text-item" v-show="checkvis('thevilla')">
-                <router-link :to="{ path: '/thevilla'}">the villa &amp; gallery</router-link>
+            <div class="text-item" :class="checkvis('thevilla') ? 'active-route' : ''">
+                <router-link :to="{ path: '/thevilla'}">the villa</router-link>
             </div>
-            <div class="text-item" v-show="checkvis('events')">
+            <div class="text-item" :class="checkvis('gallery') ? 'active-route' : ''">
+                <router-link :to="{ path: '/gallery'}">gallery</router-link>
+            </div>
+            <div class="text-item" :class="checkvis('events') ? 'active-route' : ''">
                 <router-link :to="{ path: '/events'}">events</router-link>
             </div>
-            <div class="text-item" v-show="checkvis('pricing')">
+            <div class="text-item" :class="checkvis('pricing') ? 'active-route' : ''">
                 <router-link :to="{ path: '/pricing'}">pricing</router-link>
             </div>
             <div class="text-item">
@@ -30,20 +33,40 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <div class="canvas-item" @click="togglecanvas" v-show="checkvis('home')">
-                    <router-link :to="{ path: '/'}">home</router-link>
+                <div
+                    class="canvas-item"
+                    @click="togglecanvas"
+                    :class="checkvis('home') ? 'active-route canvas' : ''">
+                        <router-link :to="{ path: '/'}">home</router-link>
                 </div>
-                <div class="canvas-item" @click="togglecanvas" v-show="checkvis('events')">
-                    <router-link :to="{ path: '/events'}">events</router-link>
+                <div
+                    class="canvas-item"
+                    @click="togglecanvas"
+                    :class="checkvis('events') ? 'active-route canvas' : ''">
+                        <router-link :to="{ path: '/events'}">events</router-link>
                 </div>
-                <div class="canvas-item" @click="togglecanvas" v-show="checkvis('pricing')">
-                    <router-link :to="{ path: '/pricing'}">pricing</router-link>
+                <div
+                    class="canvas-item"
+                    @click="togglecanvas"
+                    :class="checkvis('pricing') ? 'active-route canvas' : ''">
+                        <router-link :to="{ path: '/pricing'}">pricing</router-link>
                 </div>
-                <div class="canvas-item" @click="togglecanvas" v-show="checkvis('thevilla')">
-                    <router-link :to="{ path: '/thevilla'}">the villa</router-link>
+                <div
+                    class="canvas-item"
+                    @click="togglecanvas"
+                    :class="checkvis('thevilla') ? 'active-route canvas' : ''">
+                        <router-link :to="{ path: '/thevilla'}">the villa</router-link>
                 </div>
-                <div class="canvas-item" @click="togglecanvas">
-                    <button class="button cta-canvas">book</button>
+                <div
+                    class="canvas-item"
+                    @click="togglecanvas"
+                    :class="checkvis('gallery') ? 'active-route' : ''">
+                        <router-link :to="{ path: '/gallery'}">gallery</router-link>
+                </div>
+                <div
+                    class="canvas-item"
+                    @click="togglecanvas">
+                        <button class="button cta-canvas">book</button>
                 </div>
             </div>
             
@@ -66,7 +89,7 @@ export default {
             this.$router.push({ path: '/'})
         },
         checkvis(item) {
-            return item !== this.$route.name
+            return item === this.$route.name
         }
     }
 }
@@ -95,7 +118,22 @@ export default {
         margin: 30px 20px 0 0
         a
             font-size: 3em
-
+.active-route
+    display: flex
+    flex-direction: column
+    &:after
+        content: ''
+        width: 10px
+        height: 2px
+        background-color: $primary
+        position: relative
+        top: 2px
+        right: 2px
+.canvas
+    &:after
+        left: 320px
+        top: -6px
+        width: 80px
 .cta
     background-color: $highlight
     color: $light-background

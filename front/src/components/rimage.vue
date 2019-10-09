@@ -34,9 +34,20 @@ export default {
                 gridRowStart: String(Math.ceil((this.index + 1) / 3)),
                 gridColumnStart: String((this.index % 3) + 1),
                 gridRowEnd: String(Math.ceil((this.index + 1) / 3) + 1),
-                gridColumnEnd: String((this.index + 1) % 3),
+                gridColumnEnd: String((this.index % 3) + 2),
             }
         }
+    },
+    mounted() {
+        // console.log(String(Math.ceil((this.index + 1) / 3)), 
+        // " / " ,
+        // String((this.index % 3) + 1),
+        // " / " ,
+        // String(Math.ceil((this.index + 1) / 3) + 1),
+        // " / " ,
+        // String((this.index % 3) + 2),
+        // "index: ",
+        // this.index)
     },
     methods: {
         opengallery(path) {

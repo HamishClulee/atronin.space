@@ -1,57 +1,59 @@
 <template>
     <div class="page-con">
-        <div class="tags-con">
-            <tagselect></tagselect>
-        </div>
-        <div class="gallery" :style="style" v-if="!loading">
-            <rimage
-                v-for="(v, i) in images"
-                :key="i"
-                :source="v.path"
-                :alttext="v.alt"
-                :index="i">
-            </rimage>
-        </div>
+        <h1>The Villa</h1>
+        <h3>Layout</h3>
+        <p>
+            Set out over two levels, with four rooms wrapped around the pool on the ground 
+            floor and two rooms on the top floor that share a sunny balcony.
+        </p>
+        <threeimagerow
+            :paths="[
+                'downstairsgarden.jpg',
+                'downstairspool.jpg',
+                'fromgate.png',
+            ]">
+        </threeimagerow>    
+        <h3>Common Areas</h3>
+        <p>
+            The main common area is on the first floor. It's fully enclosed and has aircon and a fan.
+            The room has a co-working space with large desks and comfortable chairs, 
+            a sitting area with a big screen smart TV(netflix included), and the kitchen.
+        </p>
+        <threeimagerow
+            :paths="[
+                'social4.jpg',
+                'kitchen.jpg',
+                'work2.jpg',
+            ]">
+        </threeimagerow>
+        <h3>The Rooms</h3>
+        <p>
+            @RONIN has six rooms of varying size.
+            All rooms have ensuites and are cleaned daily, and deep cleaned once per week.
+        </p>
+        <threeimagerow
+            :paths="[
+                'room4full.jpg',
+                'room6couchandbed.jpg',
+                'Room2BedWardrobe.png',
+            ]">
+        </threeimagerow>
     </div>
 </template>
 
 <script>
-import _manifest from '../imagemanifest.js'
-import rimage from '../components/rimage'
-import tagselect from '../components/tagselect'
+import threeimagerow from '../components/threeimagerow.vue'
 export default {
     name: 'thevilla',
-    components: { rimage, tagselect },
+    components: {
+        threeimagerow,
+    },
     data () {
         return {
-            ogimages: _manifest.images,
-            images: _manifest.images,
-            tags: _manifest.TAGS,
-            style: {
-                gridTemplateRows: `repeat(${this.length}, 20vw)`
-            },
-            length: _manifest.images.length,
-            loading: false,
         }
     },
     mounted () {
-        this.$on('tag-selected', (n) => {
-            this.loading = true
-            if (n !== null) {
-                this.images = []
-                this.length = 0
-                this.ogimages.forEach(element => {
-                    if (element.tags.indexOf(this.tags[n]) !== -1) this.images.push(element)                
-                })
-                this.length = this.ogimages.length
-            } else {
-                this.ogimages.forEach(element => {
-                    this.images.push(element)
-                })
-                this.length = this.ogimages.length
-            }
-            this.loading = false
-        })
+
     },
     methods: {
     },
@@ -63,12 +65,11 @@ export default {
 <style lang="sass" scoped>
 .page-con
     margin-top: 120px
-.gallery
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
-    grid-gap: 0
-    width: 70%
+    width: 75%
     margin-left: auto
     margin-right: auto
-    min-height: 80vh
+h1
+    width: auto
+    border-bottom: 1px solid $highlight
+    padding-bottom: 15px
 </style>
