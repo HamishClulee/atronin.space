@@ -7,7 +7,7 @@
             </div>
             <div class="carousel-con">
                 <div class="caret-left-con" @click="goleft()"><i class="arrow left"></i></div>
-                <img :src="source" :key="index"/>
+                <img :src="source" :key="String(d_index)"/>
                 <div class="caret-left-con" @click="goright()"><i class="arrow right"></i></div>
             </div>
 
@@ -19,30 +19,21 @@ import _manifest from '../imagemanifest.js'
 export default {
     name: 'gallerymodal',
     props: {
-        opensource: String,
+        index: Number,
     },
     data() {
         return {
+            d_index: this.index,
             images: _manifest.images,
-            index: 0,
-            source: 'https://atronin.space/images/' + this.opensource,
             base:'https://atronin.space/images/',
         }
     },
     methods: {
         goleft() {
-            if (this.index === 0)
-                this.index = this.images.length -1
-            else
-                this.index--
-            this.source = this.base + this.images[this.index].path
+            this._index === 0 ? this.d_index = this.images.length -1 : this.d_index--
         },
         goright() {
-            if (this.index === this.images.length -1)
-                this.index = 0
-            else
-                this.index++
-            this.source = this.base + this.images[this.index].path
+            this.d_index === this.images.length -1 ? this.d_index = 0 : this.d_index++
         },
         closemodal() {
             this.$root.$emit('close-modal')
@@ -51,6 +42,9 @@ export default {
             this.$root.$emit('close-modal')
             this.$router.push({ path: '/thevilla'})
         }
+    },
+    computed: {
+        source() { return this.base + this.images[this.d_index].path },
     }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <figure
-        @click="opengallery(source)"
+        @click="opengallery()"
         class="gallery__item"
         :style="style">
             <img 
@@ -38,20 +38,10 @@ export default {
             }
         }
     },
-    mounted() {
-        // console.log(String(Math.ceil((this.index + 1) / 3)), 
-        // " / " ,
-        // String((this.index % 3) + 1),
-        // " / " ,
-        // String(Math.ceil((this.index + 1) / 3) + 1),
-        // " / " ,
-        // String((this.index % 3) + 2),
-        // "index: ",
-        // this.index)
-    },
+    mounted() {},
     methods: {
-        opengallery(path) {
-            this.$root.$emit('open-gallery', path)
+        opengallery() {
+            this.$root.$emit('open-gallery', this.index)
         }
     },
     computed: {

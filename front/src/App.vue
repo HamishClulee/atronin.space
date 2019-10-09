@@ -2,7 +2,7 @@
   <div class="god-div">
       <div v-if="isauthed">
           <navbar></navbar>
-          <gallerymodal v-if="showgallery" :opensource="gallerysource"></gallerymodal>
+          <gallerymodal v-if="showgallery" :index="index"></gallerymodal>
           <router-view></router-view>
       </div>
       <underconstruction v-else></underconstruction>
@@ -27,7 +27,7 @@
         data() {
             return {
                 showgallery: false,
-                gallerysource: null,
+                index: 0,
             }
         },
         created() {
@@ -37,8 +37,8 @@
             this.$root.$on('close-modal', () => {
                 this.showgallery = false
             })
-            this.$root.$on('open-gallery', (source) => {
-                this.gallerysource = source
+            this.$root.$on('open-gallery', (index) => {
+                this.index = index
                 this.showgallery = true
             })
         },
