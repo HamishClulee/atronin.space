@@ -16,7 +16,7 @@
     import rfooter from './components/rfooter.vue'
     import gallerymodal from './components/gallerymodal.vue'
     import { mapActions, mapGetters } from 'vuex'
-    import trans from './trans.js' 
+    // import trans from './trans.js' 
     export default {
         name: 'app',
         components: {
