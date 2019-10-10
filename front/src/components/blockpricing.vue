@@ -46,14 +46,14 @@ export default {
     padding-top: 40px
     padding-bottom: 40px
     text-align: center
-    background-color: $light-background
+    background-color: white
     width: 100%
 .pricing-con
     display: flex
     flex-direction: row
     justify-content: center
     align-items: center
-    background-color: $light-background
+    background-color: white
     width: 100%
     margin-left: auto
     margin-right: auto

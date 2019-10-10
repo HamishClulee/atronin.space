@@ -13,7 +13,7 @@
     import underconstruction from './components/underconstruction'
     import navbar from './components/navbar.vue'
     import rfooter from './components/rfooter.vue'
-    import { mapActions, mapGetters } from 'vuex'
+    import { mapActions, mapGetters, mapMutations } from 'vuex'
     export default {
         name: 'app',
         components: {
@@ -31,6 +31,8 @@
             this.SESSION_CHALLENGE()
         },
         mounted() {
+            window.addEventListener('resize', this.widthChanged)
+            this.widthChanged()
             this.$root.$on('close-modal', () => {
                 this.showgallery = false
             })
@@ -41,10 +43,14 @@
         },
         methods: {
             ...mapActions(['SESSION_CHALLENGE']),
+            ...mapMutations(['SET_WINDOW_WIDTH']),
+            widthChanged () {
+                this.SET_WINDOW_WIDTH(window.innerWidth)
+            },
         },
         computed: {
             ...mapGetters(['isauthed'])
-        },
+        }
     }
 </script>
 <style lang="sass" scoped>

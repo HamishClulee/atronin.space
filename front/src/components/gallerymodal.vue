@@ -63,15 +63,16 @@ export default {
     width: 100%
     text-align: center
     img
-        height: 60vh
-        max-width: 70vw
+        height: auto
+        max-height: 50vh
+        max-width: 80vw
 .carousel-con
     display: flex
     flex-direction: row
     width: 95%
     margin-left: auto
     margin-right: auto
-    height: 100%
+    height: 60vh
     align-items: center
     justify-content: space-between
 .controls-con

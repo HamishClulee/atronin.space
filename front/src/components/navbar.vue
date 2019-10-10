@@ -65,7 +65,7 @@
                 <div
                     class="canvas-item"
                     @click="togglecanvas"
-                    :class="checkvis('gallery') ? 'active-route' : ''">
+                    :class="checkvis('gallery') ? 'active-route canvas' : ''">
                         <router-link :to="{ path: '/gallery'}">gallery</router-link>
                 </div>
                 <div class="canvas-item" @click="togglecanvas">

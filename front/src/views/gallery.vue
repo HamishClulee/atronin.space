@@ -6,7 +6,7 @@
         <div class="tags-con">
             <tagselect></tagselect>
         </div>
-        <div class="gallery" :style="{ gridTemplateRows: `repeat(${Math.ceil(length / 3)}, 20vw)`}" >
+        <div class="gallery" :style="{ gridTemplateRows: rowstyle }">
             <rimage
                 v-for="(v, i) in images"
                 :key="i"
@@ -15,6 +15,9 @@
                 :index="i">
             </rimage>
         </div>
+        <div class=floating-button-con @click="gototop">
+            <div class="round-button"></div>
+        </div>
     </div>
 </template>
 
@@ -22,20 +25,23 @@
 import rimage from '../components/rimage'
 import tagselect from '../components/tagselect'
 import gallerymodal from '../components/gallerymodal.vue'
+import { mapState } from 'vuex'
 export default {
     name: 'gallery',
     components: { rimage, tagselect, gallerymodal },
     data () {
         return {
             images: [],
-            gridTemplateRows: '',
-            length: 148,
+            length: this.$manifest.images.length,
             showgallery: false,
             paths: [],
             index: 0,
+            rowcoef: 3,
+            colwidth: '40vw',
         }
     },
     mounted () {
+        this.setup()
         this.reset()
         this.$on('tag-selected', n => {
             n !== null ? this.taggedlist(n) : this.reset()
@@ -60,7 +66,7 @@ export default {
         },
         reset() {
             this.$manifest.images.forEach(element => { this.push(element) })
-            this.length = this.$manifest.images.length / 3
+            this.length = this.$manifest.images.length / this.rowcoef
         },
         push(elem) {
             this.images.push(elem)
@@ -69,9 +75,30 @@ export default {
         clear() {
             this.images = []
             this.paths = []
+        },
+        gototop() {
+            window.scrollTo(0, 0)
+        },
+        setup() {
+            if (this.window_width < 860) {
+                this.rowcoef = 2
+                this.colwidth = '40vw'
+            } else {
+                this.rowcoef = 3
+                this.colwidth = '20vw'
+            }
         }
     },
     computed: {
+        ...mapState(['window_width']),
+        rowstyle() {
+            return `repeat(${String(Math.ceil(this.length / this.rowcoef))}, ${String(this.colwidth)})`
+        }
+    },
+    watch: {
+        window_width() {
+            this.setup()
+        }
     }
 }
 </script>
@@ -86,6 +113,32 @@ export default {
     margin-left: auto
     margin-right: auto
     min-height: 60vh
+    @media (min-width: 0px) and (max-width: 860px)
+        grid-template-columns: repeat(2, 1fr)
 h5
     text-align: center
+.floating-button-con
+    position: fixed
+    height: 45px
+    width: 45px
+    border-radius: 50%
+    background: $tertiary
+    bottom: 30px
+    right: 30px
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    &:hover
+        box-shadow: 0 18px 32px rgba(0,0,0,0.35), 0 15px 15px rgba(0,0,0,0.30)
+    .round-button
+        width: 0
+        height: 0
+        border-left: 8px solid transparent
+        border-right: 8px solid transparent
+        border-bottom: 8px solid $light-background
+        margin-bottom: 4px
+        margin-right: 2px
+        
 </style>

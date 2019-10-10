@@ -1,4 +1,4 @@
 export const state = {
-    windowwidth: 0,
+    window_width: 0,
     isauthed: false
 }
