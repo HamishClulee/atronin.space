@@ -27,7 +27,7 @@ export default {
     },
     methods: {
         goleft() {
-            this._index === 0 ? this.d_index = this.paths.length -1 : this.d_index--
+            this.d_index === 0 ? this.d_index = this.paths.length -1 : this.d_index--
         },
         goright() {
             this.d_index === this.paths.length -1 ? this.d_index = 0 : this.d_index++
