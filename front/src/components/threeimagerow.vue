@@ -3,7 +3,7 @@
         <figure
             v-for="(path, i) in paths"
             :key="i"
-            @click="opengallery(path)"
+            @click="opengallery(i)"
             :class="'gallery-image-' + String(i)">
                 <img 
                     :src="'https://atronin.space/images/' + path"
@@ -21,7 +21,8 @@
 export default {
     name: 'threeimagerow',
     props: {
-        paths: Array
+        paths: Array,
+        row: Number,
     },
     data () {
         return {
@@ -30,8 +31,8 @@ export default {
     mounted() {
     },
     methods: {
-        opengallery(path) {
-            this.$root.$emit('open-gallery', path)
+        opengallery(i) {
+            this.$parent.$emit('open-gallery', i + (this.row * 3))
         }
     },
     computed: {

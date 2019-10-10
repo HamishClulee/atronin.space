@@ -41,7 +41,7 @@ export default {
     mounted() {},
     methods: {
         opengallery() {
-            this.$root.$emit('open-gallery', this.index)
+            this.$parent.$emit('open-gallery', this.index)
         }
     },
     computed: {
@@ -63,7 +63,6 @@ figure
     width: 100%
     height: 100%
     object-fit: cover
-    border: 1px solid lighten($secondary, 61)
 img
     opacity: 1
     display: block

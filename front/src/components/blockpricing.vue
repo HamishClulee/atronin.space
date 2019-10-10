@@ -17,7 +17,12 @@
         <h5>All our rooms have ensuites.</h5>
         <h5>All rooms are cleaned daily with new linens every few days.</h5>
         <div class="cta-con">
-            <button class="button">BOOK A SPOT</button>
+            <router-link 
+                tag="button"
+                :to="{ path: '/book'}"
+                class="button cta">
+                book a spot
+            </router-link>
         </div>
     </div>
 </template>

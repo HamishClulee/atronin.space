@@ -3,7 +3,7 @@
         <div
             class="tag"
             v-show="active === null || active === n"
-            v-for="(v, n, i) in tags"
+            v-for="(v, n, i) in $manifest.TAGS"
             :key="i"
             @click="tagselected(n)">
                 #{{ v }}
@@ -12,19 +12,15 @@
             class="button clear-tags"
             v-if="active !== null"
             @click="tagselected(null)">
-                Clear Tags
+                clear selection
         </button>
     </div>
 </template>
 <script>
-import _manifest from '../imagemanifest.js'
 export default {
     name: 'tagselect',
-    props: {
-    },
     data () {
         return {
-            tags: _manifest.TAGS,
             active: null
         }
     },
@@ -33,8 +29,6 @@ export default {
             this.active = n
             this.$parent.$emit('tag-selected', n)
         }
-    },
-    computed: {
     }
 }
 </script>
@@ -45,7 +39,7 @@ export default {
     align-items: center
     justify-content: space-evenly
     flex-wrap: wrap
-    width: 70%
+    width: 100%
     margin-left: auto
     margin-right: auto
 .tag

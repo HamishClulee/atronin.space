@@ -19,7 +19,12 @@
                 <router-link :to="{ path: '/pricing'}">pricing</router-link>
             </div>
             <div class="text-item">
-                <button class="button cta">book</button>
+                <router-link 
+                    tag="button"
+                    :to="{ path: '/book'}"
+                    class="button cta">
+                    book
+                </router-link>
             </div>
         </div>
         <div class="hamburger" @click="togglecanvas">
@@ -63,10 +68,13 @@
                     :class="checkvis('gallery') ? 'active-route' : ''">
                         <router-link :to="{ path: '/gallery'}">gallery</router-link>
                 </div>
-                <div
-                    class="canvas-item"
-                    @click="togglecanvas">
-                        <button class="button cta-canvas">book</button>
+                <div class="canvas-item" @click="togglecanvas">
+                    <router-link 
+                        tag="button"
+                        :to="{ path: '/book'}"
+                        class="button cta-canvas">
+                        book
+                    </router-link>
                 </div>
             </div>
             

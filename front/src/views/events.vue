@@ -1,11 +1,7 @@
 <template>
     <div class="page-con">
+        <gallerymodal v-if="showgallery" :index="index" :paths="paths"></gallerymodal>
         <h1>Events</h1>
-        <p>
-            Some of our BBQ events are shown below. 
-            Over the next month we are going to try out cooking classes and tours, 
-            and may add games nights or outings based on interest.
-        </p>
         <h3>BBQ's</h3>
         <p>
             Every two weeks we run a house BBQ, some food is provided, friends are encouraged to join
@@ -16,46 +12,58 @@
             which helps give the Villa a warm and social feel.
         </p>
         <threeimagerow
-            :paths="[
-                'bbq1.jpg',
-                'bbq2.jpg',
-                'bbq3.jpg',
-            ]">
+            :row="0"
+            :paths="[paths[0], paths[1], paths[2]]">
         </threeimagerow>
         <threeimagerow
-            :paths="[
-                'bbq4.jpg',
-                'bbq5.jpg',
-                'bbq6.jpg',
-            ]">
+            :row="0"
+            :paths="[paths[3], paths[4], paths[5]]">
         </threeimagerow>
         <threeimagerow
-            :paths="[
-                'bbq7.jpg',
-                'bbq8.jpg',
-                'bbq9.jpg',
-            ]">
+            :row="2"
+            :paths="[paths[6], paths[7], paths[8]]">
         </threeimagerow>
         <h3>Other Events - Coming Soon!</h3>
-        <p>The main common area is on the first floor. It's fully enclosed and has aircon and a fan.
-            The room has a co-working space with large desks and comfortable chairs, 
-            a sitting area with a big screen smart TV(netflix included), and the kitchen.
+        <p>
+            Over the next month we are going to try out cooking classes and tours, 
+            and may add games nights or outings based on interest.
         </p>
     </div>
 </template>
 
 <script>
 import threeimagerow from '../components/threeimagerow.vue'
+import gallerymodal from '../components/gallerymodal.vue'
 export default {
     name: 'events',
     components: {
-        threeimagerow
+        threeimagerow, gallerymodal,
     },
     data () {
         return {
+            showgallery: false,
+            index: 0,
+            paths: [
+                'bbq1.jpg',
+                'bbq2.jpg',
+                'bbq3.jpg',
+                'bbq4.jpg',
+                'bbq5.jpg',
+                'bbq6.jpg',
+                'bbq7.jpg',
+                'bbq8.jpg',
+                'bbq9.jpg',
+            ]
         }
     },
     mounted () {
+        this.$on('open-gallery', i => {
+            this.index = i
+            this.showgallery = true
+        })
+        this.$on('close-modal', () => {
+            this.showgallery = false
+        })
     },
     methods: {
     },
@@ -64,14 +72,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.page-con
-    margin-top: 120px
-    width: 75%
-    margin-left: auto
-    margin-right: auto
-h1
-    width: auto
-    border-bottom: 1px solid $highlight
-    padding-bottom: 15px
-</style>
+<style lang="sass" scoped></style>

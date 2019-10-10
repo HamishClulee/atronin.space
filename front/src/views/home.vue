@@ -19,7 +19,12 @@
                 and spending time with like minded people in the evenings and weekends.
             </p>
             <div class="cta-con">
-                <button class="button cta">BOOK A ROOM NOW</button>
+                <router-link 
+                    tag="button"
+                    :to="{ path: '/book'}"
+                    class="button cta">
+                    book A ROOM
+                </router-link>
             </div>
         </div>
         <imagetextblock
@@ -28,7 +33,7 @@
             texttitle="Co-Living"
             :textbody="body1"
             background="#212941"
-            routeto="/colive">
+            routeto="/gallery">
         </imagetextblock>
         <imagetextblock
             :imgleft="false"

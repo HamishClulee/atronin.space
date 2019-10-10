@@ -1,5 +1,5 @@
 <template>
-    <div class="book-con">
+    <div class="page-con">
         <h1>Booking coming soon!</h1>
         <h4>We are working hard on making bookings and checking avaliability through this website a reality!</h4>
         <h4>By December this year (2019), you will be able to do everything right here!</h4>
@@ -28,14 +28,6 @@
 </script>
 
 <style lang="sass" scoped>
-.book-con
-    width: 95%
-    margin-left: auto
-    margin-right: auto
-    margin-top: 150px
-    text-align: center
-h1
-    color: $primary
 h3
     color: $tertiary
 </style>

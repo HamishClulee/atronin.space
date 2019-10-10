@@ -2,7 +2,6 @@ const TAGS = {
     villa: 'villa',
     outdoor: 'outdoor',
     cowork: 'cowork',
-    social: 'social',
     bbq: 'bbq',
     kitchen: 'kitchen',
     rooms: 'rooms',
@@ -12,7 +11,6 @@ const TAGS = {
     room4: 'room-4',
     room5: 'room-5',
     room6: 'room-6',
-    events: 'events',
     karaoke: 'karaoke',
 }
 
@@ -380,7 +378,7 @@ const images = [
     {
       "path": "social1.jpg",
       "tags": [
-        TAGS.social,
+        TAGS.cowork,
       ]
     },
     {
@@ -434,7 +432,7 @@ const images = [
     {
       "path": "social3.jpg",
       "tags": [
-        TAGS.social,
+        TAGS.cowork,
       ]
     },
     {
@@ -488,7 +486,7 @@ const images = [
     {
       "path": "social4.jpg",
       "tags": [
-        TAGS.social,
+        TAGS.cowork,
       ]
     },
     {
@@ -542,7 +540,7 @@ const images = [
     {
       "path": "social6.jpg",
       "tags": [
-        TAGS.social,
+        TAGS.cowork,
       ]
     },
     {
@@ -590,7 +588,7 @@ const images = [
     {
       "path": "social.jpg",
       "tags": [
-        TAGS.social,
+        TAGS.cowork,
       ]
     },
     {

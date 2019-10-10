@@ -2,49 +2,46 @@
     <div class="gallery-con">
         <div class="gallery-content">
             <div class="controls-con">
-                <h6 @click="gotogallery">view gallery</h6>
-                <h6 @click="closemodal">close</h6>
+                <div class="close-x" @click="closemodal"></div>
             </div>
             <div class="carousel-con">
                 <div class="caret-left-con" @click="goleft()"><i class="arrow left"></i></div>
-                <img :src="source" :key="String(d_index)"/>
+                <img :src="source" :key="String(paths[d_index])"/>
                 <div class="caret-left-con" @click="goright()"><i class="arrow right"></i></div>
             </div>
-
         </div>
     </div>
 </template>
 <script>
-import _manifest from '../imagemanifest.js'
 export default {
     name: 'gallerymodal',
     props: {
         index: Number,
+        paths: Array,
     },
     data() {
         return {
             d_index: this.index,
-            images: _manifest.images,
             base:'https://atronin.space/images/',
         }
     },
     methods: {
         goleft() {
-            this._index === 0 ? this.d_index = this.images.length -1 : this.d_index--
+            this._index === 0 ? this.d_index = this.paths.length -1 : this.d_index--
         },
         goright() {
-            this.d_index === this.images.length -1 ? this.d_index = 0 : this.d_index++
+            this.d_index === this.paths.length -1 ? this.d_index = 0 : this.d_index++
         },
         closemodal() {
-            this.$root.$emit('close-modal')
+            this.$parent.$emit('close-modal')
         },
         gotogallery() {
-            this.$root.$emit('close-modal')
-            this.$router.push({ path: '/thevilla'})
+            this.$parent.$emit('close-modal')
+            this.$router.push({ path: '/gallery'})
         }
     },
     computed: {
-        source() { return this.base + this.images[this.d_index].path },
+        source() { return this.base + this.paths[this.d_index] },
     }
 }
 </script>
@@ -62,7 +59,7 @@ export default {
     transition: 0.5s
 .gallery-content
     position: relative
-    top: 15%
+    top: 20%
     width: 100%
     text-align: center
     img
@@ -81,14 +78,11 @@ export default {
     h6
         color: $light-background
         cursor: pointer
+    position: relative
+    bottom: 80px
     display: flex
-    flex-direction: row
-    align-items: center
-    justify-content: space-between
-    width: 30%
-    margin-left: auto
-    margin-right: auto
-    height: 50px
+    justify-content: flex-end
+    margin-right: 30px
 i
   border: solid white
   border-width: 0 2px 2px 0
@@ -101,4 +95,21 @@ i
 .left
   transform: rotate(135deg)
   -webkit-transform: rotate(135deg)
+.close-x
+    color: $light-background
+    cursor: pointer
+    border-radius: 50%
+    background: #323232
+    font-size: 26px
+    display: inline-block
+    height: 50px
+    width: 50px
+    line-height: 0px
+    padding: 0
+    &:before
+        content: "x"
+        position: relative
+        top: 21px
+
+
 </style>

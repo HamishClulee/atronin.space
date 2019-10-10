@@ -1,5 +1,6 @@
 <template>
-    <div class="pricing-con">
+    <div class="page-con">
+        <h1>pricing</h1>
         <blockpricing :style="{ minHeight: '60vh' }"></blockpricing>
     </div>
 </template>
@@ -24,8 +25,4 @@ import blockpricing from '../components/blockpricing.vue'
     }
 </script>
 
-<style lang="sass" scoped>
-.pricing-con
-    padding-top: 20vh
-    background-color: $light-background
-</style>
+<style lang="sass" scoped></style>

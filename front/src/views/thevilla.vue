@@ -1,5 +1,6 @@
 <template>
     <div class="page-con">
+        <gallerymodal v-if="showgallery" :index="index" :paths="paths"></gallerymodal>
         <h1>The Villa</h1>
         <h3>Layout</h3>
         <p>
@@ -7,11 +8,8 @@
             floor and two rooms on the top floor that share a sunny balcony.
         </p>
         <threeimagerow
-            :paths="[
-                'downstairsgarden.jpg',
-                'downstairspool.jpg',
-                'fromgate.png',
-            ]">
+            :row="0"
+            :paths="[paths[0], paths[1], paths[2]]">
         </threeimagerow>    
         <h3>Common Areas</h3>
         <p>
@@ -20,11 +18,8 @@
             a sitting area with a big screen smart TV(netflix included), and the kitchen.
         </p>
         <threeimagerow
-            :paths="[
-                'social4.jpg',
-                'kitchen.jpg',
-                'work2.jpg',
-            ]">
+            :row="0"
+            :paths="[paths[3], paths[4], paths[5]]">
         </threeimagerow>
         <h3>The Rooms</h3>
         <p>
@@ -32,28 +27,45 @@
             All rooms have ensuites and are cleaned daily, and deep cleaned once per week.
         </p>
         <threeimagerow
-            :paths="[
-                'room4full.jpg',
-                'room6couchandbed.jpg',
-                'Room2BedWardrobe.png',
-            ]">
+            :row="0"
+            :paths="[paths[6], paths[7], paths[8]]">
         </threeimagerow>
     </div>
 </template>
 
 <script>
 import threeimagerow from '../components/threeimagerow.vue'
+import gallerymodal from '../components/gallerymodal.vue'
 export default {
     name: 'thevilla',
     components: {
-        threeimagerow,
+        threeimagerow, gallerymodal,
     },
     data () {
         return {
+            index: 0,
+            showgallery: false,
+            paths: [
+                'downstairsgarden.jpg',
+                'downstairspool.jpg',
+                'outdoor8.jpg',
+                'social4.jpg',
+                'living4.jpg',
+                'living5.jpg',
+                'room4full.jpg',
+                'room6couchandbed.jpg',
+                'room69.jpg',
+            ]
         }
     },
     mounted () {
-
+        this.$on('open-gallery', i => {
+            this.index = i
+            this.showgallery = true
+        })
+        this.$on('close-modal', () => {
+            this.showgallery = false
+        })
     },
     methods: {
     },
@@ -62,14 +74,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.page-con
-    margin-top: 120px
-    width: 75%
-    margin-left: auto
-    margin-right: auto
-h1
-    width: auto
-    border-bottom: 1px solid $highlight
-    padding-bottom: 15px
-</style>
+<style lang="sass" scoped></style>

@@ -1,9 +1,12 @@
 <template>
     <div class="page-con">
+        <gallerymodal v-if="showgallery" :index="index" :paths="paths"></gallerymodal>
+        <h1>gallery</h1>
+        <h5>Show images tagged with:</h5>
         <div class="tags-con">
             <tagselect></tagselect>
         </div>
-        <div class="gallery" :style="style" v-if="!loading">
+        <div class="gallery" :style="{ gridTemplateRows: `repeat(${Math.ceil(length / 3)}, 20vw)`}" >
             <rimage
                 v-for="(v, i) in images"
                 :key="i"
@@ -16,44 +19,57 @@
 </template>
 
 <script>
-import _manifest from '../imagemanifest.js'
 import rimage from '../components/rimage'
 import tagselect from '../components/tagselect'
+import gallerymodal from '../components/gallerymodal.vue'
 export default {
     name: 'gallery',
-    components: { rimage, tagselect },
+    components: { rimage, tagselect, gallerymodal },
     data () {
         return {
-            ogimages: _manifest.images,
-            images: _manifest.images,
-            tags: _manifest.TAGS,
-            style: {
-                gridTemplateRows: `repeat(${this.length}, 20vw)`
-            },
-            length: _manifest.images.length,
-            loading: false,
+            images: [],
+            gridTemplateRows: '',
+            length: 148,
+            showgallery: false,
+            paths: [],
+            index: 0,
         }
     },
     mounted () {
-        this.$on('tag-selected', (n) => {
-            this.loading = true
-            if (n !== null) {
-                this.images = []
-                this.length = 0
-                this.ogimages.forEach(element => {
-                    if (element.tags.indexOf(this.tags[n]) !== -1) this.images.push(element)                
-                })
-                this.length = this.ogimages.length
-            } else {
-                this.ogimages.forEach(element => {
-                    this.images.push(element)
-                })
-                this.length = this.ogimages.length
-            }
-            this.loading = false
+        this.reset()
+        this.$on('tag-selected', n => {
+            n !== null ? this.taggedlist(n) : this.reset()
+        })
+        this.$on('open-gallery', i => {
+            this.index = i
+            this.showgallery = true
+        })
+        this.$on('close-modal', () => {
+            this.showgallery = false
         })
     },
     methods: {
+        taggedlist(n) {
+            this.clear()
+            this.$manifest.images.forEach(element => {
+                if (element.tags.indexOf(this.$manifest.TAGS[n]) !== -1) {
+                    this.push(element)
+                }                
+            })
+            this.length = this.images.length
+        },
+        reset() {
+            this.$manifest.images.forEach(element => { this.push(element) })
+            this.length = this.$manifest.images.length / 3
+        },
+        push(elem) {
+            this.images.push(elem)
+            this.paths.push(elem.path)
+        },
+        clear() {
+            this.images = []
+            this.paths = []
+        }
     },
     computed: {
     }
@@ -61,14 +77,15 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.page-con
-    margin-top: 120px
 .gallery
     display: grid
     grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(148, 20vw)
     grid-gap: 0
-    width: 70%
+    width: 100%
     margin-left: auto
     margin-right: auto
-    min-height: 80vh
+    min-height: 60vh
+h5
+    text-align: center
 </style>

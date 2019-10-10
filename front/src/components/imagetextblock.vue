@@ -53,7 +53,8 @@
         display: flex
         align-items: center
         justify-content: center
-        padding: 70px
+        padding: 30px 150px
+        width: 100%
         @media (min-width: 0px) and (max-width: 540px)
             padding: 10px
     .img-con
@@ -64,10 +65,9 @@
             width: 98%
         img
             width: 100%
-            border: 1px solid $secondary
             transition: all 0.8s ease
             &:hover
-                transform: scale(0.98)
+                transform: scale(0.99)
                 cursor: pointer
                 transition: all 0.8s ease
     .text-con
