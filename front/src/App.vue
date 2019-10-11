@@ -1,23 +1,22 @@
 <template>
   <div class="god-div">
-      <div v-if="isauthed">
+      <!-- <div v-if="isauthed"> -->
           <navbar></navbar>
           <router-view></router-view>
-      </div>
-      <underconstruction v-else></underconstruction>
+      <!-- </div> -->
+      <!-- <underconstruction v-else></underconstruction> -->
       <rfooter></rfooter>
   </div>
 </template>
 
 <script>
-    import underconstruction from './components/underconstruction'
+    // import underconstruction from './components/underconstruction'
     import navbar from './components/navbar.vue'
     import rfooter from './components/rfooter.vue'
-    import { mapActions, mapGetters, mapMutations } from 'vuex'
+    import { mapMutations } from 'vuex'
     export default {
         name: 'app',
         components: {
-            underconstruction,
             navbar,
             rfooter,
         },
@@ -28,7 +27,7 @@
             }
         },
         created() {
-            this.SESSION_CHALLENGE()
+            // this.SESSION_CHALLENGE()
         },
         mounted() {
             window.addEventListener('resize', this.widthChanged)
@@ -42,14 +41,14 @@
             })
         },
         methods: {
-            ...mapActions(['SESSION_CHALLENGE']),
+            // ...mapActions(['SESSION_CHALLENGE']),
             ...mapMutations(['SET_WINDOW_WIDTH']),
             widthChanged () {
                 this.SET_WINDOW_WIDTH(window.innerWidth)
             },
         },
         computed: {
-            ...mapGetters(['isauthed'])
+            // ...mapGetters(['isauthed'])
         }
     }
 </script>
