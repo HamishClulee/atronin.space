@@ -5,9 +5,11 @@
                 <div class="close-x" @click="closemodal"></div>
             </div>
             <div class="carousel-con">
-                <div class="caret-left-con" @click="goleft()"><i class="arrow left"></i></div>
+                <div class="caret-con" @click="goleft()">
+                    <i class="arrow left"></i>
+                </div>
                 <img :src="source" :key="String(paths[d_index])"/>
-                <div class="caret-left-con" @click="goright()"><i class="arrow right"></i></div>
+                <div class="caret-con" @click="goright()"><i class="arrow right"></i></div>
             </div>
         </div>
     </div>
@@ -28,9 +30,11 @@ export default {
     methods: {
         goleft() {
             this.d_index === 0 ? this.d_index = this.paths.length -1 : this.d_index--
+            this.ensurenoselect()
         },
         goright() {
             this.d_index === this.paths.length -1 ? this.d_index = 0 : this.d_index++
+            this.ensurenoselect()
         },
         closemodal() {
             this.$parent.$emit('close-modal')
@@ -38,6 +42,10 @@ export default {
         gotogallery() {
             this.$parent.$emit('close-modal')
             this.$router.push({ path: '/gallery'})
+        },
+        ensurenoselect() {
+            if (window.getSelection) window.getSelection().removeAllRanges()
+            else if (document.selection) document.selection.empty()
         }
     },
     computed: {
@@ -59,36 +67,37 @@ export default {
     transition: 0.5s
 .gallery-content
     position: relative
-    top: 20%
+    top: 10%
     width: 100%
     text-align: center
     img
         height: auto
-        max-height: 50vh
+        max-height: 70vh
         max-width: 80vw
 .carousel-con
     display: flex
     flex-direction: row
-    width: 95%
+    width: 100%
     margin-left: auto
     margin-right: auto
-    height: 60vh
+    height: 70vh
     align-items: center
     justify-content: space-between
 .controls-con
+    position: relative
+    bottom: -20px
+    height: 100%
+    display: flex
+    justify-content: flex-end
+    left: -2vw
     h6
         color: $light-background
         cursor: pointer
-    position: relative
-    bottom: 80px
-    display: flex
-    justify-content: flex-end
-    margin-right: 30px
 i
   border: solid white
   border-width: 0 2px 2px 0
   display: inline-block
-  padding: 10px
+  padding: 5px
   cursor: pointer
 .right
   transform: rotate(-45deg)
@@ -111,6 +120,7 @@ i
         content: "x"
         position: relative
         top: 21px
-
-
+.caret-con
+    padding: 50px 5px
+    cursor: pointer
 </style>

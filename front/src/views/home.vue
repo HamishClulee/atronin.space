@@ -44,16 +44,7 @@
             background="#fff"
             routeto="/thevilla">
         </imagetextblock>
-        <gmap-map
-            :center="{ lat: -8.638259, lng: 115.150751}"
-            :zoom="14"
-            style="width: 100%; height: 300px">
-            <gmap-marker
-                :position="{ lat: -8.638259, lng: 115.150751}"
-                :clickable="true"
-                :draggable="true">
-            </gmap-marker>
-        </gmap-map>
+
         <imagetextblock
             :imgleft="true"
             imgsrc="https://atronin.space/images/social4.jpg"
@@ -64,7 +55,16 @@
         </imagetextblock>
 
         <blockpricing></blockpricing>
-
+        <gmap-map
+            :center="{ lat: -8.638259, lng: 115.150751}"
+            :zoom="14"
+            style="width: 100%; height: 300px">
+            <gmap-marker
+                :position="{ lat: -8.638259, lng: 115.150751}"
+                :clickable="true"
+                :draggable="true">
+            </gmap-marker>
+        </gmap-map>
     </div>
 </template>
 
@@ -81,7 +81,7 @@
         },
         data () {
             return {
-                body1: `<p>Live where you work.</p><p>No commute, no office politics, just great people and no barriers to achieving your goals.</p><p>Need a gym? Bali MMA, CrossFit Wanderlust and Nirvana Strength are less than 5 mins away from the Villa.</p><p>Want to party? Batu Balong is just around the corner!</p>`,
+                body1: `<p>Live where you work.</p><p>No commute, no office politics, just great people and no barriers to achieving your goals.</p><p>Need a gym? Bali MMA, CrossFit Wanderlust and Nirvana Strength are less than 5 mins away from the Villa.</p>`,
                 body2: `<p>Spacious rooms, clean ensuite bathrooms, quality furnishings.</p><p>Take a dip in the pool!</p><p>Cook in comfort in an enclosed kitchen, which has everything you need, including ample bench space.</p>`,
                 body3: `<p>BBQ's around the pool?</p><p>Tours with one of our staff members?</p><p>Incredible networking potential?</p><p>Cooking classes for awesome local dishes?</p><p>We do it all.</p>`,
             }

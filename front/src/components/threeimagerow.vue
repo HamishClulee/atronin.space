@@ -4,7 +4,8 @@
             v-for="(path, i) in paths"
             :key="i"
             @click="opengallery(i)"
-            :class="'gallery-image-' + String(i)">
+            :class="'gallery-image-' + String(i)"
+            v-show="vis(i)">
                 <img 
                     :src="'https://atronin.space/images/' + path"
                     alt="image of @RONIN vila"
@@ -18,6 +19,7 @@
 
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
     name: 'threeimagerow',
     props: {
@@ -33,9 +35,17 @@ export default {
     methods: {
         opengallery(i) {
             this.$parent.$emit('open-gallery', i + (this.row * 3))
-        }
+        },
+        vis(i) {
+            if (this.window_width < 760) {
+                return i < 2
+            } else {
+                return true
+            }
+        } 
     },
     computed: {
+        ...mapState(['window_width'])
     }
 }
 </script>
@@ -43,6 +53,8 @@ export default {
 figure
     margin: 10px
     position: relative
+    @media (min-width: 0px) and (max-width: 1280px)
+        margin: 5px
     &:hover
         cursor: pointer
         background-color: darken($dark-background, 10)
@@ -54,6 +66,11 @@ figure
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: repeat(1, 20vw)
+    @media (min-width: 0px) and (max-width: 760px)
+        grid-template-rows: repeat(2, 30vw)
+        grid-template-columns: repeat(2, 1fr)
+        height: 30vw
+        overflow: hidden
     grid-gap: 0
     width: 100%
     margin-left: auto
