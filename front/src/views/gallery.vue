@@ -43,6 +43,7 @@ export default {
     mounted () {
         this.setup()
         this.reset()
+        this.shuffle()
         this.$on('tag-selected', n => {
             n !== null ? this.taggedlist(n) : this.reset()
         })
@@ -63,10 +64,12 @@ export default {
                 }                
             })
             this.length = this.images.length
+            this.shuffle()
         },
         reset() {
             this.$manifest.images.forEach(element => { this.push(element) })
             this.length = this.$manifest.images.length / this.rowcoef
+            this.shuffle()
         },
         push(elem) {
             this.images.push(elem)
@@ -86,6 +89,16 @@ export default {
             } else {
                 this.rowcoef = 3
                 this.colwidth = '20vw'
+            }
+        },
+        shuffle() {
+            let currentIndex = this.images.length, temporaryValue, randomIndex
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex)
+                currentIndex -= 1
+                temporaryValue = this.images[currentIndex]
+                this.images[currentIndex] = this.images[randomIndex]
+                this.images[randomIndex] = temporaryValue
             }
         }
     },
