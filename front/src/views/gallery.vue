@@ -1,6 +1,6 @@
 <template>
     <div class="page-con">
-        <gallerymodal v-if="showgallery" :index="index" :paths="paths"></gallerymodal>
+        <gallerymodal v-if="showgallery" :index="index" :images="images"></gallerymodal>
         <h1>gallery</h1>
         <h5>Show images tagged with:</h5>
         <div class="tags-con">
@@ -9,7 +9,7 @@
         <div class="gallery" :style="{ gridTemplateRows: rowstyle }">
             <rimage
                 v-for="(v, i) in images"
-                :key="i"
+                :key="String(v.path + i)"
                 :source="v.path"
                 :alttext="v.alt"
                 :index="i">
@@ -34,7 +34,6 @@ export default {
             images: [],
             length: this.$manifest.images.length,
             showgallery: false,
-            paths: [],
             index: 0,
             rowcoef: 3,
             colwidth: '40vw',
@@ -43,7 +42,6 @@ export default {
     mounted () {
         this.setup()
         this.reset()
-        this.shuffle()
         this.$on('tag-selected', n => {
             n !== null ? this.taggedlist(n) : this.reset()
         })
@@ -64,20 +62,16 @@ export default {
                 }                
             })
             this.length = this.images.length
-            this.shuffle()
         },
         reset() {
             this.$manifest.images.forEach(element => { this.push(element) })
             this.length = this.$manifest.images.length / this.rowcoef
-            this.shuffle()
         },
         push(elem) {
             this.images.push(elem)
-            this.paths.push(elem.path)
         },
         clear() {
             this.images = []
-            this.paths = []
         },
         gototop() {
             window.scrollTo(0, 0)

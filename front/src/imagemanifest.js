@@ -232,12 +232,6 @@ const images = [
       ]
     },
     {
-      "path": "bbq29.jpg",
-      "tags": [
-        TAGS.bbq,
-      ]
-    },
-    {
       "path": "kara1.jpg",
       "tags": [
         TAGS.karaoke,

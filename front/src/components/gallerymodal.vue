@@ -8,7 +8,7 @@
                 <div class="caret-con" @click="goleft()">
                     <i class="arrow left"></i>
                 </div>
-                <img :src="source" :key="String(paths[d_index])"/>
+                <img :src="source" :key="String(images[d_index].path)"/>
                 <div class="caret-con" @click="goright()"><i class="arrow right"></i></div>
             </div>
         </div>
@@ -19,7 +19,7 @@ export default {
     name: 'gallerymodal',
     props: {
         index: Number,
-        paths: Array,
+        images: Array,
     },
     data() {
         return {
@@ -29,11 +29,11 @@ export default {
     },
     methods: {
         goleft() {
-            this.d_index === 0 ? this.d_index = this.paths.length -1 : this.d_index--
+            this.d_index === 0 ? this.d_index = this.images.length -1 : this.d_index--
             this.ensurenoselect()
         },
         goright() {
-            this.d_index === this.paths.length -1 ? this.d_index = 0 : this.d_index++
+            this.d_index === this.images.length -1 ? this.d_index = 0 : this.d_index++
             this.ensurenoselect()
         },
         closemodal() {
@@ -49,7 +49,7 @@ export default {
         }
     },
     computed: {
-        source() { return this.base + this.paths[this.d_index] },
+        source() { return this.base + this.images[this.d_index].path },
     }
 }
 </script>
