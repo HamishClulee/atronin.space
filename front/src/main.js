@@ -8,6 +8,7 @@ import manifest from './imagemanifest.js'
 
 Vue.prototype.$manifest = manifest
 
+/* key is restricted to usage from atronin.space and maps API only, sorry to get your hopes up */
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyBR6eSdLVeJ3lD9UJeElCQtKQTdTxh8rwg'
