@@ -15,15 +15,15 @@
             }
         },
         mounted () {
-            setTimeout(() => {
-                let el = document.getElementById('replace')
-                if (el && this.window_width > 1280) {
-                    el.style.background = "url('https://atronin.space/images/hero-high-qual.jpg')"
-                    el.style.backgroundPosition = 'top'
-                    el.style.backgroundRepeat = 'no-repeat'
-                    el.style.backgroundSize = 'cover'
-                } 
-            }, 600)
+            // setTimeout(() => {
+            //     let el = document.getElementById('replace')
+            //     if (el && this.window_width > 1280) {
+            //         el.style.background = "url('https://atronin.space/images/hero-high-qual.jpg')"
+            //         el.style.backgroundPosition = 'top'
+            //         el.style.backgroundRepeat = 'no-repeat'
+            //         el.style.backgroundSize = 'cover'
+            //     } 
+            // }, 600)
         },
         methods: {
         },
