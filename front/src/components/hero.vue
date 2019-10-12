@@ -1,5 +1,5 @@
 <template>
-    <div class="hero-con">
+    <div class="hero-con" id="replace">
         <h1 class="massive">WE KNOW CO-DOING</h1>
     </div>
 </template>
@@ -14,6 +14,15 @@
             }
         },
         mounted () {
+            setTimeout(() => {
+                let el = document.getElementById('replace')
+                if (el) {
+                    el.style.background = "url('https://atronin.space/images/hero-high-qual.jpg')"
+                    el.style.backgroundPosition = 'top'
+                    el.style.backgroundRepeat = 'no-repeat'
+                    el.style.backgroundSize = 'cover'
+                } 
+            }, 600)
         },
         methods: {
         },
@@ -45,48 +54,4 @@
     background-repeat: no-repeat
     background-size: cover
     display: flex
-.enter-con
-    // position: absolute
-    // bottom: 20px
-    // left: 50vw
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-direction: column
-    animation: bounce 1s 3
-    cursor: pointer
-    h5
-        color: $light-background
-.triangle
-    width: 0 
-    height: 0 
-    border-left: 10px solid transparent
-    border-right: 10px solid transparent
-    border-top: 10px solid $light-background
-.over-triangle
-    width: 0
-    height: 0
-    border-left: 5px solid transparent
-    border-right: 5px solid transparent
-    border-top: 5px solid white
-    position: relative
-    top: -10px
-    left: -5px
-
-@-webkit-keyframes bounce 
-    0%, 20%, 50%, 80%, 100%
-        -webkit-transform: translateY(0)
-    40%
-        -webkit-transform: translateY(-30px) 
-    60%
-        -webkit-transform: translateY(-20px)
- 
-@keyframes bounce 
-    0%, 20%, 50%, 80%, 100%
-        transform: translateY(0)
-    40%
-        transform: translateY(-30px)
-    60%
-        transform: translateY(-20px)
-
 </style>
