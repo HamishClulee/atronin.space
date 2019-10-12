@@ -29,7 +29,7 @@
         </div>
         <imagetextblock
             :imgleft="true"
-            imgsrc="https://atronin.space/images/work1.jpg"
+            imgsrc="https://atronin.space/images/outdoor9.jpg"
             texttitle="Co-Living"
             :textbody="body1"
             background="#212941"
@@ -47,7 +47,7 @@
 
         <imagetextblock
             :imgleft="true"
-            imgsrc="https://atronin.space/images/social4.jpg"
+            imgsrc="https://atronin.space/images/bbq13.jpg"
             texttitle="Events"
             :textbody="body3"
             background="#813754"

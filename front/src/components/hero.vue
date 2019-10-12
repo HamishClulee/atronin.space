@@ -5,6 +5,7 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
         name: 'hero',
         components: {
@@ -16,7 +17,7 @@
         mounted () {
             setTimeout(() => {
                 let el = document.getElementById('replace')
-                if (el) {
+                if (el && this.window_width > 1280) {
                     el.style.background = "url('https://atronin.space/images/hero-high-qual.jpg')"
                     el.style.backgroundPosition = 'top'
                     el.style.backgroundRepeat = 'no-repeat'
@@ -27,6 +28,7 @@
         methods: {
         },
         computed: {
+            ...mapState(['window_width'])
         }
     }
 </script>
