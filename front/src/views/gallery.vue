@@ -37,6 +37,7 @@ export default {
             index: 0,
             rowcoef: 3,
             colwidth: '40vw',
+            rowstyle: '',
         }
     },
     mounted () {
@@ -61,11 +62,15 @@ export default {
                     this.push(element)
                 }                
             })
-            this.length = this.images.length
+            this.setlistparams()
         },
         reset() {
             this.$manifest.images.forEach(element => { this.push(element) })
-            this.length = this.$manifest.images.length / this.rowcoef
+            this.setlistparams()
+        },
+        setlistparams() {
+            this.length = this.images.length
+            this.rowstyle = `repeat(${String(Math.ceil(this.length / this.rowcoef))}, ${String(this.colwidth)})`
         },
         push(elem) {
             this.images.push(elem)
@@ -84,6 +89,7 @@ export default {
                 this.rowcoef = 3
                 this.colwidth = '20vw'
             }
+            this.rowstyle = `repeat(${String(Math.ceil(this.length / this.rowcoef))}, ${String(this.colwidth)})`
         },
         shuffle() {
             let currentIndex = this.images.length, temporaryValue, randomIndex
@@ -98,10 +104,10 @@ export default {
     },
     computed: {
         ...mapState(['window_width']),
-        rowstyle() {
-            let x = `repeat(${String(this.length)}, ${String(this.colwidth)})`
-            return x
-        }
+        // rowstyle() {
+        //     let x = `repeat(${String(this.length)}, ${String(this.colwidth)})`
+        //     return x
+        // }
     },
     watch: {
         window_width() {
