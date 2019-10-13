@@ -66,10 +66,6 @@ export default {
         this.$on('close-modal', () => {
             this.showgallery = false
         })
-    },
-    methods: {
-    },
-    computed: {
     }
 }
 </script>
