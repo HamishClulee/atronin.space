@@ -1,6 +1,6 @@
 <template>
     <div class="page-con">
-        <gallerymodal v-if="showgallery" :index="index" :paths="paths"></gallerymodal>
+        <gallerymodal v-if="showgallery" :index="index" :images="images"></gallerymodal>
         <h1>Events</h1>
         <h3>BBQ's</h3>
         <p>
@@ -13,15 +13,15 @@
         </p>
         <threeimagerow
             :row="0"
-            :paths="[paths[0], paths[1], paths[2]]">
+            :paths="[images[0], images[1], images[2]]">
         </threeimagerow>
         <threeimagerow
             :row="0"
-            :paths="[paths[3], paths[4], paths[5]]">
+            :paths="[images[3], images[4], images[5]]">
         </threeimagerow>
         <threeimagerow
             :row="2"
-            :paths="[paths[6], paths[7], paths[8]]">
+            :paths="[images[6], images[7], images[8]]">
         </threeimagerow>
         <h3>Other Events - Coming Soon!</h3>
         <p>
@@ -43,7 +43,7 @@ export default {
         return {
             showgallery: false,
             index: 0,
-            paths: [
+            images: [
                 'bbq1.jpg',
                 'bbq2.jpg',
                 'bbq3.jpg',

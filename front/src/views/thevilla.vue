@@ -1,6 +1,6 @@
 <template>
     <div class="page-con">
-        <gallerymodal v-if="showgallery" :index="index" :paths="paths"></gallerymodal>
+        <gallerymodal v-if="showgallery" :index="index" :images="paths"></gallerymodal>
         <h1>The Villa</h1>
         <h3>Layout</h3>
         <p>

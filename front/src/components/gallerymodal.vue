@@ -8,7 +8,7 @@
                 <div class="caret-con" @click="goleft()">
                     <i class="arrow left"></i>
                 </div>
-                <img :src="source" :key="String(images[d_index].path)"/>
+                <img :src="source" :key="String(images[d_index].path || images[d_index])"/>
                 <div class="caret-con" @click="goright()"><i class="arrow right"></i></div>
             </div>
         </div>
@@ -49,7 +49,7 @@ export default {
         }
     },
     computed: {
-        source() { return this.base + this.images[this.d_index].path },
+        source() { return this.base + (this.images[this.d_index].path || this.images[this.d_index]) },
     }
 }
 </script>
