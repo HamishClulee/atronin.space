@@ -99,7 +99,7 @@ export default {
     computed: {
         ...mapState(['window_width']),
         rowstyle() {
-            let x = `repeat(${String(Math.ceil(this.length / this.rowcoef))}, ${String(this.colwidth)})`
+            let x = `repeat(${String(this.length)}, ${String(this.colwidth)})`
             return x
         }
     },
