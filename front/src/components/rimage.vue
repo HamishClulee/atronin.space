@@ -62,11 +62,7 @@ export default {
     },
     watch: {
         window_width() {
-            if (this.window_width < 860) {
-                this.rowcoef = 2
-            } else {
-                this.rowcoef = 3
-            }
+            this.rowcoef = this.window_width < 860 ? 2 : 3
         }
     }
 }

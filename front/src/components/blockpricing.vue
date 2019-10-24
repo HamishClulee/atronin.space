@@ -21,7 +21,7 @@
                 tag="button"
                 :to="{ path: '/book'}"
                 class="button cta">
-                book a spot
+                book a room
             </router-link>
         </div>
     </div>
@@ -39,6 +39,7 @@ export default {
     justify-content: center
     .button
         width: 50%
+        min-width: 200px
         margin: 15px auto
         background-color: $highlight
         color: $light-background

@@ -40,6 +40,8 @@
             margin-top: 20vh
             font-size: 4em
     margin-top: 70px
+    @media (min-width: 0px) and (max-width: 540px)
+        margin-top: 60px
     width: 100%
     background: url('https://atronin.space/images/social.jpg')
     height: calc(100vh - 70px)

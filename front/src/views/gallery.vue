@@ -2,7 +2,7 @@
     <div class="page-con">
         <gallerymodal v-if="showgallery" :index="index" :images="images"></gallerymodal>
         <h1>gallery</h1>
-        <h5>Show images tagged with:</h5>
+        <h5>Show{{ tagactive ? 'ing' : '' }} images tagged with:</h5>
         <div class="tags-con">
             <tagselect></tagselect>
         </div>
@@ -38,6 +38,7 @@ export default {
             rowcoef: 3,
             colwidth: '40vw',
             rowstyle: '',
+            tagactive: false,
         }
     },
     mounted () {
@@ -45,6 +46,7 @@ export default {
         this.reset()
         this.$on('tag-selected', n => {
             n !== null ? this.taggedlist(n) : this.reset()
+            this.tagactive = !!n
         })
         this.$on('open-gallery', i => {
             this.index = i
@@ -104,10 +106,6 @@ export default {
     },
     computed: {
         ...mapState(['window_width']),
-        // rowstyle() {
-        //     let x = `repeat(${String(this.length)}, ${String(this.colwidth)})`
-        //     return x
-        // }
     },
     watch: {
         window_width() {

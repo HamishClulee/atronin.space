@@ -5,18 +5,13 @@
             <h1>YOU@RONIN</h1>
             <p>
                 Ronin is a co-work-co-live villa in Canggu. We are focused on providing the best possible experience for 
-                digital nomads. We are nomads ourselves and found that for some people
-                co-working spaces were to noisy and made it hard to focus, and that living alone could become lonely over time.
+                digital nomads. Made by Nomads, for Nomads.
             </p>
             <p>
-                @RONIN is our answer to those problems. A six
-                bedroom villa, filled with people in the same siutation as you, set up for co-working. Lightening fast internet, 
-                lots of desk space and comfortable chairs. All rooms are well furnished and spacious with private bathrooms. 
-                Let us take care of everything else, and you can focus on getting shit done.</p>
-             <p>
-                We promote a social environment with events like BBQ's, tours and cooking classes. 
-                We also screen our guests to ensure a good social fit overall. Settle in to a life focused on productivity during the day
-                and spending time with like minded people in the evenings and weekends.
+                @RONIN, A six
+                bedroom villa, filled with awesome people, set up for co-working. 100Mbps fiberoptic internet, 
+                lots of desk space and comfortable chairs. All rooms are well furnished and spacious with private bathrooms. The kitchen is enclosed and fully equiped.
+                We've made the environment, now you can focus on getting shit done.
             </p>
             <div class="cta-con">
                 <router-link 

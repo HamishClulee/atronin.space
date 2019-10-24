@@ -77,6 +77,7 @@
             width: 80%
         @media (min-width: 0px) and (max-width: 540px)
             width: 98%
+            padding: 5px
         h2
             color: $primary
             font-size: 4em
@@ -85,7 +86,7 @@
             display: flex
             flex-direction: column
             @media (min-width: 0px) and (max-width: 540px)
-                font-size: 2.5em
+                font-size: 2.2em
             @media (min-width: 540px) and (max-width: 780px)
                 font-size: 3em
             &:after
@@ -96,6 +97,8 @@
                 background-color: $font-dark
                 top: 5px
                 left: 3px
+                @media (min-width: 0px) and (max-width: 520px)
+                    width: 25px
         .after-col
             &:after
                 background-color: $highlight !important
@@ -104,6 +107,6 @@
             padding: 0 20px 0 40px
             font-family: 'Open Sans', sans serif
             @media (min-width: 0px) and (max-width: 540px)
-                padding: 0 10px 0 30px
+                padding: 0 10px 0 10px
 </style>
 ''

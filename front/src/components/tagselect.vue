@@ -12,7 +12,7 @@
             class="button clear-tags"
             v-if="active !== null"
             @click="tagselected(null)">
-                clear selection
+                reset
         </button>
     </div>
 </template>
@@ -53,4 +53,18 @@ export default {
     justify-content: center
     margin: 5px
     cursor: pointer
+    @media (min-width: 0px) and (max-width: 520px)
+        width: 60px
+        padding: 5px
+        font-size: 0.8em
+        margin: 1px
+.button.clear-tags
+    width: 140px
+    @media (min-width: 0px) and (max-width: 520px)
+        width: 120px
+        height: 32px
+        line-height: 29px
+        padding: 0
+        font-size: 0.8em
+        margin: 1px
 </style>

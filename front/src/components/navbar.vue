@@ -120,6 +120,8 @@ export default {
     justify-content: flex-start
     flex-direction: column
     align-items: flex-end
+    @media (min-width: 0px) and (max-width: 520px)
+        font-size: 0.8em
     .canvas-text-con
         width: 400px
         text-align: right
@@ -142,6 +144,9 @@ export default {
         left: 320px
         top: -6px
         width: 80px
+        @media (min-width: 0px) and (max-width: 520px)
+            width: 50px
+            left: 348px
 .cta
     background-color: $highlight
     color: $light-background
@@ -204,10 +209,15 @@ export default {
     display: flex
     align-items: center
     cursor: pointer
+    @media (min-width: 0px) and (max-width: 520px)
+        height: 60px
     &:hover
         opacity: 0.8
     img
         height: 50px
+        @media (min-width: 0px) and (max-width: 520px)
+            height: 30px
+
 .text-item
     padding: 0 20px
 </style>
