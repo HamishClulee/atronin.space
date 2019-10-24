@@ -4,12 +4,10 @@
         <h1>Events</h1>
         <h3>BBQ's</h3>
         <p>
-            Every two weeks we run a house BBQ, some food is provided, friends are encouraged to join
-            and everyone is encouraged to bring some food.
+            Every two weeks we run the now legendary house BBQ, incredible food, awesome banter, best vibe ever.
         </p>
         <p>
-            The BBQ has been a great success, everyone having a good time together,
-            which helps give the Villa a warm and social feel.
+            Some pics below, more on the <router-link :to="{ path: '/gallery'}">gallery page</router-link>.
         </p>
         <threeimagerow
             :row="0"
@@ -22,6 +20,14 @@
         <threeimagerow
             :row="2"
             :paths="[images[6], images[7], images[8]]">
+        </threeimagerow>
+        <threeimagerow
+            :row="2"
+            :paths="[images[9], images[10], images[11]]">
+        </threeimagerow>
+        <threeimagerow
+            :row="2"
+            :paths="[images[12], images[13], images[14]]">
         </threeimagerow>
         <h3>Other Events - Coming Soon!</h3>
         <p>
@@ -44,15 +50,21 @@ export default {
             showgallery: false,
             index: 0,
             images: [
-                'bbq1.jpg',
-                'bbq2.jpg',
-                'bbq3.jpg',
-                'bbq4.jpg',
-                'bbq5.jpg',
-                'bbq6.jpg',
-                'bbq7.jpg',
-                'bbq8.jpg',
-                'bbq9.jpg',
+                'bbq10.jpg',
+                'bbq11.jpg',
+                'bbq12.jpg',
+                'bbq13.jpg',
+                'bbq14.jpg',
+                'bbq15.jpg',
+                'bbq16.jpg',
+                'bbq17.jpg',
+                'bbq18.jpg',
+                'bbq19.jpg',
+                'bbq20.jpg',
+                'bbq21.jpg',
+                'bbq22.jpg',
+                'bbq23.jpg',
+                'bbq24.jpg',
             ]
         }
     },
