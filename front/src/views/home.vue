@@ -13,14 +13,6 @@
                 lots of desk space and comfortable chairs. All rooms are well furnished and spacious with private bathrooms. The kitchen is enclosed and fully equiped.
                 We've made the environment, now you can focus on getting shit done.
             </p>
-            <div class="cta-con">
-                <router-link 
-                    tag="button"
-                    :to="{ path: '/book'}"
-                    class="button cta">
-                    book A ROOM
-                </router-link>
-            </div>
         </div>
         <imagetextblock
             :imgleft="true"
