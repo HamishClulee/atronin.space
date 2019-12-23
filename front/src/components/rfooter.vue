@@ -3,8 +3,7 @@
 
         <div class="right-con">
             <h2>GET IN TOUCH</h2>
-            <p><strong>E_</strong> info@atronin.space</p>
-            <p><strong>P_</strong> +62 812 384 114 64</p>
+            <p><strong>WhatsApp</strong> +62 812 384 114 64</p>
             <p>Jalan Raya Canggu, Gang Pratama1, Canggu, Bali.</p>
         </div>
 
