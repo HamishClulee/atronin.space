@@ -2,7 +2,6 @@
     <div class="page-con">
         <gallerymodal v-if="showgallery" :index="index" :images="images"></gallerymodal>
         <h1>gallery</h1>
-        <h5>Show{{ tagactive ? 'ing' : '' }} images tagged with:</h5>
         <div class="tags-con">
             <tagselect></tagselect>
         </div>
@@ -152,5 +151,8 @@ h5
         border-bottom: 8px solid $light-background
         margin-bottom: 4px
         margin-right: 2px
+
+.tags-con
+    margin: 1em 5px
         
 </style>
