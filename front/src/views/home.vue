@@ -28,7 +28,8 @@
             texttitle="Co-Living"
             :textbody="body1"
             background="#212941"
-            routeto="/gallery">
+            routeto="/gallery"
+            alttag="The ground floor of the villa and pool">
         </imagetextblock>
         <imagetextblock
             :imgleft="false"
@@ -37,7 +38,8 @@
             :textdark="true"
             :textbody="body2"
             background="#fff"
-            routeto="/thevilla">
+            routeto="/thevilla"
+            alttag="digital nomads working in our co-working space">
         </imagetextblock>
 
         <imagetextblock
@@ -46,7 +48,8 @@
             texttitle="Events"
             :textbody="body3"
             background="#813754"
-            routeto="/events">
+            routeto="/events"
+            alttag="People socialise around the pool at a bbq">
         </imagetextblock>
 
         <blockpricing></blockpricing>

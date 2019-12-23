@@ -3,7 +3,7 @@
         <div class="pricing-con">
             <div class="item nightly">
                 <h4 class="duration">Nightly</h4>
-                <h5 class="price">300k</h5>
+                <h5 class="price">260k</h5>
             </div>
             <div class="item weekly">
                 <h4 class="duration">Weekly</h4>

@@ -6,25 +6,11 @@
             </div>
         </div>
         <div class="navbar-right">
-            <div class="text-item" :class="checkvis('thevilla') ? 'active-route' : ''">
-                <router-link :to="{ path: '/thevilla'}">the villa</router-link>
+            <div class="text-item" :class="checkvis('home') ? 'active-route' : ''">
+                <router-link :to="{ path: '/'}">home</router-link>
             </div>
             <div class="text-item" :class="checkvis('gallery') ? 'active-route' : ''">
                 <router-link :to="{ path: '/gallery'}">gallery</router-link>
-            </div>
-            <div class="text-item" :class="checkvis('events') ? 'active-route' : ''">
-                <router-link :to="{ path: '/events'}">events</router-link>
-            </div>
-            <div class="text-item" :class="checkvis('pricing') ? 'active-route' : ''">
-                <router-link :to="{ path: '/pricing'}">pricing</router-link>
-            </div>
-            <div class="text-item">
-                <router-link 
-                    tag="button"
-                    :to="{ path: '/book'}"
-                    class="button cta">
-                    book
-                </router-link>
             </div>
         </div>
         <div class="hamburger" @click="togglecanvas">
@@ -47,34 +33,8 @@
                 <div
                     class="canvas-item"
                     @click="togglecanvas"
-                    :class="checkvis('events') ? 'active-route canvas' : ''">
-                        <router-link :to="{ path: '/events'}">events</router-link>
-                </div>
-                <div
-                    class="canvas-item"
-                    @click="togglecanvas"
-                    :class="checkvis('pricing') ? 'active-route canvas' : ''">
-                        <router-link :to="{ path: '/pricing'}">pricing</router-link>
-                </div>
-                <div
-                    class="canvas-item"
-                    @click="togglecanvas"
-                    :class="checkvis('thevilla') ? 'active-route canvas' : ''">
-                        <router-link :to="{ path: '/thevilla'}">the villa</router-link>
-                </div>
-                <div
-                    class="canvas-item"
-                    @click="togglecanvas"
                     :class="checkvis('gallery') ? 'active-route canvas' : ''">
                         <router-link :to="{ path: '/gallery'}">gallery</router-link>
-                </div>
-                <div class="canvas-item" @click="togglecanvas">
-                    <router-link 
-                        tag="button"
-                        :to="{ path: '/book'}"
-                        class="button cta-canvas">
-                        book
-                    </router-link>
                 </div>
             </div>
             
