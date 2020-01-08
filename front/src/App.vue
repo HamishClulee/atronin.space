@@ -1,16 +1,12 @@
 <template>
-  <div class="god-div">
-      <!-- <div v-if="isauthed"> -->
-          <navbar></navbar>
-          <router-view></router-view>
-      <!-- </div> -->
-      <!-- <underconstruction v-else></underconstruction> -->
-      <rfooter></rfooter>
-  </div>
+<div class="god-div">
+    <navbar></navbar>
+    <router-view></router-view>
+    <rfooter></rfooter>
+</div>
 </template>
 
 <script>
-    // import underconstruction from './components/underconstruction'
     import navbar from './components/navbar.vue'
     import rfooter from './components/rfooter.vue'
     import { mapMutations } from 'vuex'
