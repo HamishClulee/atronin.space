@@ -23,7 +23,7 @@
             }
         },
         created() {
-            // this.SESSION_CHALLENGE()
+            // this.SESSION_CHALLENGE() removeable
         },
         mounted() {
             window.addEventListener('resize', this.widthChanged)
