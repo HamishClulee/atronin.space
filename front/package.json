@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.18.1",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.13.1",
     "path": "^0.12.7",
     "sass-loader": "^7.1.0",
     "style-resources-loader": "^1.2.1",
